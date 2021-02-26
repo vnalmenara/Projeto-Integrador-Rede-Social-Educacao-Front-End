@@ -1,0 +1,14 @@
+button{
+  color:white;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: #F44235;
+  border: 1px solid #B20B0B;
+  border-radius: 10px;
+
+}
+
+.sidebar{
+  position: fixed;
+  width: 23%;
+}
