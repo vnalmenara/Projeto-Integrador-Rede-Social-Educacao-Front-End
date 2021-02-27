@@ -1,14 +1,24 @@
-button{
+.btn-barra{
   color:white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 25px;
   background-color: #F44235;
-  border: 1px solid #B20B0B;
-  border-radius: 10px;
 
 }
 
 .sidebar{
   position: fixed;
   width: 23%;
+}
+
+.btn-vermelhoclaro{
+  background-color:  #F44235;
+}
+
+.btn-verdepetroleo{
+  background-color: #0F6D62;
+}
+
+.btn-verdeclaro{
+  background-color:#3BBBA0;
 }
