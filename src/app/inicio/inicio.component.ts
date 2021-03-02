@@ -7,11 +7,10 @@ import { PostagemService } from '../service/postagem.service';
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
-  styleUrls: ['./inicio.component.css']
+  styleUrls: ['./inicio.component.css'],
 })
 export class InicioComponent implements OnInit {
-
-  postagem: Postagem = new Postagem;
+  postagem: Postagem = new Postagem();
   listaPostagens: Postagem[];
 
   foto = environment.foto;
@@ -19,21 +18,22 @@ export class InicioComponent implements OnInit {
   constructor(
     private router: Router,
     private postagemService: PostagemService
-  ) { }
+  ) {}
 
   ngOnInit() {
-    if(environment.token == ''){
-      alert('Sua seção expirou, faça o login novamente.')
-      this.router.navigate(['/entrar'])
+    if (environment.token == '') {
+      alert('Sua sessão expirou, faça o login novamente.');
+      this.router.navigate(['/entrar']);
     }
   }
 
-  postar(){
-    this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem)=>{
-      this.postagem = resp;
-      alert('Postagem realizada com sucesso!')
-      this.postagem = new Postagem;
-    })
+  postar() {
+    this.postagemService
+      .postPostagem(this.postagem)
+      .subscribe((resp: Postagem) => {
+        this.postagem = resp;
+        alert('Postagem realizada com sucesso!');
+        this.postagem = new Postagem();
+      });
   }
-
 }
