@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="#" routerLink='/inicio'>
         <p class="d-flex align-top">
             <img src="../../assets/img/logo-mathethai.png" alt="Logo Mathetai">
         </p>
@@ -17,9 +17,9 @@
                     Exatas
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Matemática</a>
-                    <a class="dropdown-item" href="#">Física</a>
-                    <a class="dropdown-item" href="#">Química</a>
+                    <a class="dropdown-item" href="#" routerLink='/tema'>Matemática</a>
+                    <a class="dropdown-item" href="#" routerLink='/tema'>Física</a>
+                    <a class="dropdown-item" href="#" routerLink='/tema'>Química</a>
                 </div>
             </li>
             <li class="nav-item dropdown pr-3">
@@ -28,18 +28,18 @@
                     Humanas
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Português</a>
-                    <a class="dropdown-item" href="#">Sociologia</a>
-                    <a class="dropdown-item" href="#">História</a>
-                    <a class="dropdown-item" href="#">Geografia</a>
-                    <a class="dropdown-item" href="#">Inglês</a>
-                    <a class="dropdown-item" href="#">Filosofia</a>
-                    <a class="dropdown-item" href="#">Literatura</a>
-                    <a class="dropdown-item" href="#">Redação</a>
+                    <a class="dropdown-item" href="#" routerLink='/tema'>Português</a>
+                    <a class="dropdown-item" href="#" routerLink='/tema'>Sociologia</a>
+                    <a class="dropdown-item" href="#" routerLink='/tema'>História</a>
+                    <a class="dropdown-item" href="#" routerLink='/tema'>Geografia</a>
+                    <a class="dropdown-item" href="#" routerLink='/tema'>Inglês</a>
+                    <a class="dropdown-item" href="#" routerLink='/tema'>Filosofia</a>
+                    <a class="dropdown-item" href="#" routerLink='/tema'>Literatura</a>
+                    <a class="dropdown-item" href="#" routerLink='/tema'>Redação</a>
                 </div>
             </li>
             <li class="nav-item active pr-3">
-                <a class="nav-link fs-20" href="#">Biológicas <span class="sr-only">(página atual)</span></a>
+                <a class="nav-link fs-20" href="#" routerLink='/tema'>Biológicas <span class="sr-only">(página atual)</span></a>
             </li>
 
             <li class="nav-item dropdown pr-3">
@@ -48,10 +48,10 @@
                     <i class="fas fa-plus"></i>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Direito</a>
-                    <a class="dropdown-item" href="#">Finanças</a>
-                    <a class="dropdown-item" href="#">Política</a>
-                    <a class="dropdown-item" href="#">Programação</a>
+                    <a class="dropdown-item" href="#" routerLink='/tema'>Direito</a>
+                    <a class="dropdown-item" href="#" routerLink='/tema'>Finanças</a>
+                    <a class="dropdown-item" href="#" routerLink='/tema'>Política</a>
+                    <a class="dropdown-item" href="#" routerLink='/tema'>Programação</a>
                 </div>
             </li>
 
@@ -65,12 +65,12 @@
         <li class="nav-item dropdown d-flex align-items-center">
             <a class="nav-link dropdown-toggle fs-20 text-white" href="#" id="navbarDropdown" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src="../../assets/img/mulherperfilexemplo.jpg" alt="Foto perfil" width="50px" height="50px"
+                <img src="{{foto}}" alt="Foto perfil" width="50px" height="50px"
                     class="img-fluid rounded-circle">
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#">Editar perfil</a>
-                <a class="dropdown-item" href="#">Sair</a>
+                <a (click)='sair()' class="dropdown-item" href="#">Sair</a>
             </div>
         </li>
 

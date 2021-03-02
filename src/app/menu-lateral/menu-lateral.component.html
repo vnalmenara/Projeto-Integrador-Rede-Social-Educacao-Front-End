@@ -1,0 +1,35 @@
+<div class="d-flex flex-column justify-content-start sidebar" >
+  <button type="button" class="btn btn-barra mb-2 p-3" data-toggle="modal" data-target='#pergunta'>Fazer uma pergunta</button>
+  <button type="button" class="btn btn-barra mb-2 p-3">Comunidades</button>
+  <button type="button" class="btn btn-barra mb-2 p-3">Mini-mentoria</button>
+  <button type="button" class="btn btn-barra mb-2 p-3">Materiais compartilhados</button>
+  <button type="button" class="btn btn-barra mb-2 p-3">Eventos</button>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="pergunta" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="TituloModalCentralizado">Faça uma pergunta</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+              <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+
+              <div class="form-group d-flex flex-column justify-content-center">
+                  <label for="titulo">Escreva aqui:</label>
+                  <textarea name="descricao" id="descricao" cols="60" placeholder="Escreva sua pergunta aqui..."></textarea>    
+              </div>
+              
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-vermelhoclaro text-white" data-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-verdepetroleo text-white" data-dismiss="modal">Publicar</button>
+          </div>
+      </div>
+  </div>
+</div>

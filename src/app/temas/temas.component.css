@@ -1,0 +1,41 @@
+h1{
+  background-color: #0F6D62;
+  
+}
+
+.card {
+  border-radius: 20px;
+}
+
+.postInicio {
+  background-color: #f3f2ef;
+  border: 1px solid #b6b6b6;
+  border-radius: 0.8rem;
+  padding: 8px;
+}
+
+.postInicio .imgPost {
+  width: 48px;
+  height: 48px;
+  box-sizing: border-box;
+  background-clip: content-box;
+  border-radius: 50%;
+  background-size: cover;
+}
+.fas {
+  font-size: 1.25rem;
+}
+
+.fa-photo-video {
+  color: #77dd77;
+}
+.fa-user-tag {
+  color: #7ea4b3;
+}
+.fa-laugh {
+  color: #fbfb47;
+}
+.postInicio .postOpcoes a {
+  text-decoration: none;
+  color: #494949;
+}

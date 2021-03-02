@@ -1,1 +1,64 @@
-<p>cadastrar works!</p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 d-flex flex-column justify-content-center align-items-center">
+            <div> <img src="../../assets/img/logo-mathethai.png" alt="logo">
+            </div>
+
+
+            <div>
+                <h4>Venha Fazer parte dessa comunidade</h4>
+                <h4 class="text-center">Aprenda e ensine!</h4>
+            </div>
+
+
+        </div>
+
+        <div class="col-md-6">
+            <div class="row  d-flex align-items-center flex-column mt-5">
+                <div class="col-md-8">
+                    <div class=" cadastre-s">
+                        <h1 class="fonte25 text-center mb-4"> CADASTRE-SE </h1>
+                    </div>
+
+
+                    <div class=" form-group text-color">
+                        <label for="nome"> Nome Completo </label>
+
+                        <input [(ngModel)]='user.nome_completo' class="form-control" type="text" name="nome" id="nome " placeholder="Nome">
+                    </div>
+                    <div class="form-group text-color ">
+                        <label for="email"> E-mail </label>
+                        <input [(ngModel)]='user.email' class="form-control" type="text" name="email" id="email" placeholder="Insira seu e-mail">
+                    </div>
+
+                    <div class="form-group text-color">
+                        <label for="link-foto"> Link da foto </label>
+                        <input [(ngModel)]='user.foto' class="form-control" type="text" name="link-foto" id="link-foto" placeholder="Link da sua foto">
+                    </div>
+  
+                    <div class="form-group text-color">
+                        <label for="contato"> Contato </label>
+                        <input [(ngModel)]='user.contato' class="form-control" type="text" name="contato" id="contato" placeholder="Informe seu whatsapp ou rede social de sua preferência">
+                    </div>
+
+                    <div class="form-group text-color">
+                        <label for="Senha"> Senha </label>
+                        <input (input)='confirmSenha($event)' class="form-control " type="password" name="senha" id="senha" placeholder="Senha">
+                    </div>
+
+                    <div class="form-group text-color ">
+                        <label for="confirmSenha"> Confirme sua senha </label>
+
+                        <input [(ngModel)]='user.senha' class="form-control" type="password" name="confirmSenha" id="confirmSenha" placeholder="Confirme sua senha">
+                    </div>
+                    <br>
+
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn botao-cancel mr-3" routerLink='/entrar'>CANCELAR</button>
+                        <button (click)='cadastrar()' type="submit" class="btn botao-cadas">CADASTRAR</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
