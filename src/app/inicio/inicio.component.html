@@ -67,7 +67,8 @@
               rows="1"
               placeholder="No que você está pensando hoje?"
               style="border-radius: 0.8rem"
-            ></textarea>
+              [(ngModel)]='postagem.descricao'
+              ></textarea>
           </div>
           <div
             class="postOpcoes d-flex flex-wrap justify-content-around align-items-center"
@@ -75,7 +76,7 @@
             <a href=""><i class="fas fa-photo-video"></i> Foto/Vídeo</a>
             <a href=""><i class="fas fa-user-tag"></i> Marcar pessoas</a>
             <a href=""><i class="fas fa-laugh"></i> Sentimento</a>
-            <a class="btn btn-success text-white" href="">Publicar</a>
+            <button class="btn btn-success text-white" (click)='postar()'>Publicar</button>
           </div>
         </div>
       </div>
