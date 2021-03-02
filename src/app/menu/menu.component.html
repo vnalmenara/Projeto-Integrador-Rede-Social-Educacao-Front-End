@@ -69,7 +69,7 @@
                     class="img-fluid rounded-circle">
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Editar perfil</a>
+                <a class="dropdown-item" [routerLink]="['/user-edit', id]" >Editar perfil</a>
                 <a (click)='sair()' class="dropdown-item" href="#">Sair</a>
             </div>
         </li>

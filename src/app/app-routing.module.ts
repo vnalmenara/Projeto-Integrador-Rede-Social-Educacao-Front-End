@@ -4,6 +4,7 @@ import { EntrarComponent } from './entrar/entrar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { TemasComponent } from './temas/temas.component';
+import { UserEditComponent } from './edit/user-edit/user-edit.component';
 
 const routes: Routes = [
   {path:'', redirectTo: 'entrar', pathMatch: 'full'},
@@ -12,7 +13,10 @@ const routes: Routes = [
   {path: 'cadastrar', component: CadastrarComponent},
 
   {path: 'inicio', component: InicioComponent},
-  {path:'tema', component: TemasComponent}
+  {path:'tema', component: TemasComponent},
+
+  {path: 'user-edit/:id', component: UserEditComponent}
+
 ];
 
 @NgModule({
