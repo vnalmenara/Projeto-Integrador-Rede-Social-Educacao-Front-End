@@ -1,164 +1,224 @@
 <div class="container-fluid mt-5 d-flex justify-content-center">
-  <div class="col-md-3">
-    <div class="card mr-5">
-      <div
-        class="card-body text-center d-flex justify-content-between flex-column"
-        style="height: 80vh"
-      >
-        <h3 class="card-title mb-5">Top da semana</h3>
-        <div class="row">
-          <div class="col-md-2 d-flex -flex-column justify-content-between">
-            <h4><strong>#1</strong></h4>
-          </div>
-          <div class="col-md-10">
-            <h4>Probabilidade e estatística</h4>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-2 d-flex -flex-column justify-content-between">
-            <h4><strong>#2</strong></h4>
-          </div>
-          <div class="col-md-10">
-            <h4>Cálculo I</h4>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-2 d-flex -flex-column justify-content-between">
-            <h4><strong>#3</strong></h4>
-          </div>
-          <div class="col-md-10">
-            <h4>Morfologia e Taxonomia</h4>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-2 d-flex -flex-column justify-content-between">
-            <h4><strong>#4</strong></h4>
-          </div>
-          <div class="col-md-10">
-            <h4>Hannah Arendt</h4>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-2 d-flex -flex-column justify-content-between">
-            <h4><strong>#5</strong></h4>
-          </div>
-          <div class="col-md-10">
-            <h4>Globalização</h4>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-9">
-    <!-- Início: card post -->
-    <div class="row mb-3">
-      <div class="col-md-10">
-        <div class="postInicio d-flex flex-column">
-          <div class="d-flex align-items-center mt-2 mr-4 ml-4 mb-3">
-            <img
-              class="imgPost mr-3"
-              src="{{foto}}"
-              alt="Mulher"
-            />
-            <textarea
-              class="form-control"
-              name="texto"
-              id="texto"
-              rows="1"
-              placeholder="No que você está pensando hoje?"
-              style="border-radius: 0.8rem"
-              [(ngModel)]='postagem.descricao'
-              ></textarea>
-          </div>
-          <div
-            class="postOpcoes d-flex flex-wrap justify-content-around align-items-center"
-          >
-            <a href=""><i class="fas fa-photo-video"></i> Foto/Vídeo</a>
-            <a href=""><i class="fas fa-user-tag"></i> Marcar pessoas</a>
-            <a href=""><i class="fas fa-laugh"></i> Sentimento</a>
-            <button class="btn btn-success text-white" (click)='postar()'>Publicar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Fim: card post -->
-
-    <!-- Inicio: postagens outros -->
-    <div class="row mb-3">
-      <div class="col-md-10">
-        <div class="postInicio d-flex flex-column">
-          <div class="d-flex align-items-center mt-2 mr-4 ml-4 mb-3">
-            <img
-              class="imgPost mr-3"
-              src="../../assets/img/mulherperfilexemplo.jpg"
-              alt="Mulher"
-            />
-            <div>
-              <p style="font-size: 14px; line-height: 0%">
-                <strong>Mulher aleatória</strong>
-              </p>
-              <p style="font-size: 10px; line-height: 0%">Mathetai</p>
-              <p style="font-size: 10px; line-height: 0%">
-                24 de fevereiro de 2021
-              </p>
+    <div class="col-md-3">
+        <div class="card mr-5">
+            <div class="card-body text-center d-flex justify-content-between flex-column" style="height: 80vh">
+                <h3 class="card-title mb-5">Top da semana</h3>
+                <div class="row">
+                    <div class="col-md-2 d-flex -flex-column justify-content-between">
+                        <h4><strong>#1</strong></h4>
+                    </div>
+                    <div class="col-md-10">
+                        <h4>Probabilidade e estatística</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 d-flex -flex-column justify-content-between">
+                        <h4><strong>#2</strong></h4>
+                    </div>
+                    <div class="col-md-10">
+                        <h4>Cálculo I</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 d-flex -flex-column justify-content-between">
+                        <h4><strong>#3</strong></h4>
+                    </div>
+                    <div class="col-md-10">
+                        <h4>Morfologia e Taxonomia</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 d-flex -flex-column justify-content-between">
+                        <h4><strong>#4</strong></h4>
+                    </div>
+                    <div class="col-md-10">
+                        <h4>Hannah Arendt</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 d-flex -flex-column justify-content-between">
+                        <h4><strong>#5</strong></h4>
+                    </div>
+                    <div class="col-md-10">
+                        <h4>Globalização</h4>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="conteudoTexto mb-3">
-            Mathetaianos, alguém consegue me ajudar com essa questão de cálculo?
-          </div>
-          <div class="conteudoMidia mb-3">
-            <img src="../../assets/img/946312.jpg" alt="" style="width: 100%" />
-          </div>
-          <div
-            class="postOpcoes d-flex flex-wrap justify-content-around align-items-center"
-          >
-            <a href=""><i class="fas fa-thumbs-up"></i> Curtir</a>
-            <a href=""><i class="fas fa-comment"></i> Comentar</a>
-            <a href=""><i class="fas fa-share-alt"></i> Compartilhar</a>
-          </div>
         </div>
-      </div>
     </div>
+    <div class="col-md-9">
+        <!-- Início: card post -->
+        <div class="row mb-3">
+            <div class="col-md-10">
+                <div class="postInicio d-flex flex-column">
 
-    <div class="row mb-3">
-      <div class="col-md-10">
-        <div class="postInicio d-flex flex-column">
-          <div class="d-flex align-items-center mt-2 mr-4 ml-4 mb-3">
-            <img
-              class="imgPost mr-3"
-              src="../../assets/img/david-beckham-768x576.jpg.webp"
-              alt="Mulher"
-            />
-            <div>
-              <p style="font-size: 14px; line-height: 0%">
-                <strong>Mulher aleatória</strong>
-              </p>
-              <p style="font-size: 10px; line-height: 0%">Mathetai</p>
-              <p style="font-size: 10px; line-height: 0%">
-                24 de fevereiro de 2021
-              </p>
+                    <div class="d-flex align-items-center mt-2 mr-4 ml-4 mb-3">
+                        <img class="imgPost mr-3" src="{{foto}}" alt="Mulher" />
+
+
+                        <textarea class="form-control" name="texto" id="texto" rows="1" placeholder="No que você está pensando hoje?" style="border-radius: 0.8rem" [(ngModel)]='postagem.descricao'></textarea>
+                    </div>
+                    <div class="postOpcoes d-flex flex-wrap justify-content-around align-items-center">
+                        <button class="btn" data-toggle="modal" data-target="#novaImagem"> <i class="fas fa-photo-video"></i>Imagem</button>
+                        <button class="btn"><i class="fas fa-user-tag"></i> Marcar pessoas</button>
+                        <button class="btn" data-toggle="modal" data-target="#tags"><i class="fas fa-tag" aria-hidden="true"></i>
+                            Adicionar Tags</button>
+
+                        <button class="btn btn-success text-white" (click)='postar()'>Publicar</button>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="conteudoTexto mb-3">
-            Oi galera, alguém saberia como me ajudar com essa questão de física?
-          </div>
-          <div class="conteudoMidia mb-3">
-            <img
-              src="../../assets/img/futebol-681x339.jpg"
-              alt=""
-              style="width: 100%"
-            />
-          </div>
-          <div
-            class="postOpcoes d-flex flex-wrap justify-content-around align-items-center"
-          >
-            <a href=""><i class="fas fa-thumbs-up"></i> Curtir</a>
-            <a href=""><i class="fas fa-comment"></i> Comentar</a>
-            <a href=""><i class="fas fa-share-alt"></i> Compartilhar</a>
-          </div>
         </div>
-      </div>
+        <!-- Fim: card post -->
+
+        <!-- Inicio: postagens outros -->
+        <div class="row mb-3">
+            <div class="col-md-10">
+                <div class="postInicio d-flex flex-column">
+                    <!--Navbar-->
+                    <nav class="navbar navbar-light light-blue lighten-4">
+
+
+
+                        <!-- Collapse button -->
+                        <div class="mr-5">
+                            <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
+          class="fas fa-bars fa-1x"></i></span></button>
+                        </div>
+
+                        <!-- Collapsible content -->
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+
+                            <!-- Links -->
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Editar <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Deletar</a>
+                                </li>
+
+                            </ul>
+                            <!-- Links -->
+
+                        </div>
+                        <!-- Collapsible content -->
+
+                    </nav>
+                    <!--/.Navbar-->
+                    <div class="d-flex align-items-center mt-2 mr-4 ml-4 mb-3">
+                        <img class="imgPost mr-3" src="../../assets/img/mulherperfilexemplo.jpg" alt="Mulher" />
+                        <div>
+                            <p style="font-size: 14px; line-height: 0%">
+                                <strong>Mulher aleatória</strong>
+                            </p>
+                            <p style="font-size: 10px; line-height: 0%">Mathetai</p>
+                            <p style="font-size: 10px; line-height: 0%">
+                                24 de fevereiro de 2021
+                            </p>
+                        </div>
+                    </div>
+                    <div class="conteudoTexto mb-3">
+                        Mathetaianos, alguém consegue me ajudar com essa questão de cálculo?
+                    </div>
+                    <div class="conteudoMidia mb-3">
+                        <img src="../../assets/img/946312.jpg" alt="" style="width: 100%" />
+                    </div>
+                    <div class="postOpcoes d-flex flex-wrap justify-content-around align-items-center">
+                        <a href=""><i class="fas fa-thumbs-up"></i> Curtir</a>
+                        <a href=""><i class="fas fa-comment"></i> Comentar</a>
+                        <a href=""><i class="fas fa-share-alt"></i> Compartilhar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-10">
+                <div class="postInicio d-flex flex-column">
+                    <div class="d-flex align-items-center mt-2 mr-4 ml-4 mb-3">
+                        <img class="imgPost mr-3" src="../../assets/img/david-beckham-768x576.jpg.webp" alt="Mulher" />
+                        <div>
+                            <p style="font-size: 14px; line-height: 0%">
+                                <strong>Mulher aleatória</strong>
+                            </p>
+                            <p style="font-size: 10px; line-height: 0%">Mathetai</p>
+                            <p style="font-size: 10px; line-height: 0%">
+                                24 de fevereiro de 2021
+                            </p>
+                        </div>
+                    </div>
+                    <div class="conteudoTexto mb-3">
+                        Oi galera, alguém saberia como me ajudar com essa questão de física?
+                    </div>
+                    <div class="conteudoMidia mb-3">
+                        <img src="../../assets/img/futebol-681x339.jpg" alt="" style="width: 100%" />
+                    </div>
+                    <div class="postOpcoes d-flex flex-wrap justify-content-around align-items-center">
+                        <a href=""><i class="fas fa-thumbs-up"></i> Curtir</a>
+                        <a href=""><i class="fas fa-comment"></i> Comentar</a>
+                        <a href=""><i class="fas fa-share-alt"></i> Compartilhar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fim: postagens outros -->
     </div>
-    <!-- Fim: postagens outros -->
-  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="novaImagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="TituloModalCentralizado">Adicionar imagem</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="linkimagem">Link da Imagem</label>
+                    <input type="text" class="form-control" id="linkimagem" placeholder="Link da Imagem">
+                </div>
+                <div class="form-group">
+                    <label for="AdicionarLegenda">Adicionar Legenda</label>
+                    <input type="text" class="form-control" id="AdicionarLegenda" placeholder="Adicionar Legenda">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn botao-cancel" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn botao-cadas">Adicionar Imagem</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Botão para acionar modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tags">
+    Abrir modal de demonstração
+  </button>
+
+<!-- Modal -->
+<div class="modal fade" id="tags" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="tags">Adicionar Tags</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="AdicionarTags">Adicionar Tags</label>
+                    <input type="text" class="form-control" id="AdicionarTags" placeholder="Adicionar Tags">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn botao-cancel" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn botao-cadas">Adicionar Tags</button>
+            </div>
+        </div>
+    </div>
 </div>
