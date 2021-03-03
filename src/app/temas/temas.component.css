@@ -1,7 +1,14 @@
-h1{
-  background-color: #0F6D62;
+.container-fluid{
+  margin: 0;
+  padding: 0;
   
 }
+
+h1{
+  background-color: #0F6D62;
+  padding: 10px 0 20px 0;
+}
+
 
 .card {
   border-radius: 20px;
