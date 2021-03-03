@@ -69,11 +69,11 @@
     <!-- Fim: card post -->
 
     <!-- Inicio: postagens outros -->
-    <div class="row mb-3">
+    <div class="row mb-3" *ngFor='let item of listaPostagens'>
       <div class="col-md-10">
-        <div class="postInicio d-flex flex-column" *ngFor='let item of listaPostagens'>
+        <div class="postInicio d-flex flex-column">
           <div class="d-flex align-items-center mt-2 mr-4 ml-4 mb-3">
-            <img class="imgPost mr-3" src="https://i.imgur.com/Yu7fJv5.jpg" alt="Foto de perfil" />
+            <img class="imgPost mr-3" src="{{item.usuario.foto}}" alt="Foto de perfil" />
             <div>
               <p style="font-size: 14px; line-height: 0%">
                 <strong>{{item.usuario.nome_completo}}</strong>

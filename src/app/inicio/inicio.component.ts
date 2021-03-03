@@ -14,7 +14,7 @@ import { TemasService } from '../service/temas.service';
 })
 export class InicioComponent implements OnInit {
 
-  postagem: Postagem = new Postagem
+  postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
   listaTemas: Tema[]
   tema: Tema = new Tema()
@@ -59,8 +59,6 @@ export class InicioComponent implements OnInit {
 
   postar() {
     this.user.id = this.idUser
-    this.user.foto = this.foto
-    this.user.nome_completo = this.nomeUser
     this.postagem.usuario = this.user
 
     
