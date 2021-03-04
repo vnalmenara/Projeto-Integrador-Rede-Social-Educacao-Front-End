@@ -14,6 +14,8 @@ import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
+import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
+import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { QuemSomosComponent } from './quem-somos/quem-somos.component';
     MenuLateralComponent,
     InicioComponent,
     UserEditComponent,
-    QuemSomosComponent
+    QuemSomosComponent,
+    PostagemEditComponent,
+    PostagemDeleteComponent
 
   ],
   imports: [
