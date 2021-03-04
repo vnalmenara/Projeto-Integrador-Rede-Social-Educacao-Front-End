@@ -4,7 +4,9 @@ import { EntrarComponent } from './entrar/entrar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { TemasComponent } from './temas/temas.component';
+import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'entrar', pathMatch: 'full' },
@@ -12,9 +14,11 @@ const routes: Routes = [
   { path: 'entrar', component: EntrarComponent },
   { path: 'cadastrar', component: CadastrarComponent },
 
-  { path: 'inicio', component: InicioComponent },
-  { path: 'tema', component: TemasComponent },
-  { path: 'quem-somos', component: QuemSomosComponent },
+
+  {path: 'inicio', component: InicioComponent},
+  {path:'tema', component: TemasComponent},
+  {path: 'user-edit/:id', component: UserEditComponent},
+  {path: 'quem-somos', component: QuemSomosComponent}
 ];
 
 @NgModule({
