@@ -5,19 +5,15 @@ import { environment } from 'src/environments/environment.prod';
 @Component({
   selector: 'app-temas',
   templateUrl: './temas.component.html',
-  styleUrls: ['./temas.component.css']
+  styleUrls: ['./temas.component.css'],
 })
 export class TemasComponent implements OnInit {
-
-  constructor(
-    private router: Router
-  ) { }
+  constructor(private router: Router) {}
 
   ngOnInit() {
-    if(environment.token == ''){
-      alert('Sua seção expirou, faça o login novamente.')
-      this.router.navigate(['/entrar'])
+    if (environment.token == '') {
+      alert('Sua sessão expirou, faça o login novamente.');
+      this.router.navigate(['/entrar']);
     }
   }
-
 }

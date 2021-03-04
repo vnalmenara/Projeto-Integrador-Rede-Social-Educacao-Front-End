@@ -6,7 +6,7 @@
 
 
             <div>
-                <h4>Venha Fazer parte dessa comunidade</h4>
+                <h4>Venha fazer parte dessa comunidade</h4>
                 <h4 class="text-center">Aprenda e ensine!</h4>
             </div>
 
@@ -15,8 +15,8 @@
 
         <div class="col-md-6">
             <div class="row  d-flex align-items-center flex-column mt-5">
-                <div class="col-md-8">
-                    <div class=" cadastre-s">
+                <div class="col-md-10">
+                    <div>
                         <h1 class="fonte25 text-center mb-4"> CADASTRE-SE </h1>
                     </div>
 
@@ -35,7 +35,7 @@
                         <label for="link-foto"> Link da foto </label>
                         <input [(ngModel)]='user.foto' class="form-control" type="text" name="link-foto" id="link-foto" placeholder="Link da sua foto">
                     </div>
-  
+
                     <div class="form-group text-color">
                         <label for="contato"> Contato </label>
                         <input [(ngModel)]='user.contato' class="form-control" type="text" name="contato" id="contato" placeholder="Informe seu whatsapp ou rede social de sua preferência">
@@ -49,13 +49,13 @@
                     <div class="form-group text-color ">
                         <label for="confirmSenha"> Confirme sua senha </label>
 
-                        <input [(ngModel)]='user.senha' class="form-control" type="password" name="confirmSenha" id="confirmSenha" placeholder="Confirme sua senha">
+                        <input (keyup.enter)='cadastrar()' [(ngModel)]='user.senha' class="form-control" type="password" name="confirmSenha" id="confirmSenha" placeholder="Confirme sua senha">
                     </div>
                     <br>
 
                     <div class="d-flex justify-content-center">
-                        <button type="submit" class="btn botao-cancel mr-3" routerLink='/entrar'>CANCELAR</button>
-                        <button (click)='cadastrar()' type="submit" class="btn botao-cadas">CADASTRAR</button>
+                        <button type="submit" class="btn btn-vermelhoclaro text-white mr-3 mb-5" routerLink='/entrar'>CANCELAR</button>
+                        <button (click)='cadastrar()' type="submit" class="btn btn-verdepetroleo text-white mb-5">CADASTRAR</button>
 
                     </div>
                 </div>

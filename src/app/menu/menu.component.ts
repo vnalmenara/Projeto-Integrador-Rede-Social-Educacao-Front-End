@@ -9,21 +9,23 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class MenuComponent implements OnInit {
 
-  foto = environment.foto;
+  foto = environment.foto
+  id = environment.id
 
   constructor(
     private router: Router
   ) { }
 
   ngOnInit() {
+    console.log(environment.id)
   }
 
   sair(){
     this.router.navigate(['/entrar']);
-    environment.token='';
-    environment.nome_completo='';
-    environment.foto='';
-    environment.id=0;
+    environment.token=''
+    environment.nome_completo=''
+    environment.foto=''
+    environment.id=0
   }
 
 }

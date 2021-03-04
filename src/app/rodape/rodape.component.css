@@ -1,36 +1,41 @@
-footer{
-    background-color: #0F6D62;
+footer {
+  background-color: #0f6d62;
 }
 
-ul.social-network{
-    list-style: none;
-    padding: 0;
+ul.social-network {
+  list-style: none;
+  padding: 0;
 }
 
-ul.social-network li{
-    display: inline;
-    margin: 0;
-    padding: 5px;
+ul.social-network li {
+  display: inline;
+  margin: 0;
+  padding: 5px;
 }
 
-.fab{
-    font-size: 35pt;
-    color: white;
-    padding: 10px;
+.imgQuemSomos {
+  width: 45px;
+  height: 45px;
 }
 
-.fa-facebook-square:hover{
-    color: #3BBBA0;
+.fab {
+  font-size: 35pt;
+  color: white;
+  padding: 10px;
 }
 
-.fa-instagram-square:hover{
-    color:#3BBBA0;
+.fa-facebook-square:hover {
+  color: #3bbba0;
 }
 
-.fa-linkedin:hover{
-    color:#3BBBA0;
+.fa-instagram-square:hover {
+  color: #3bbba0;
 }
 
-.fa-github-square:hover{
-    color: #3BBBA0;
+.fa-linkedin:hover {
+  color: #3bbba0;
+}
+
+.fa-github-square:hover {
+  color: #3bbba0;
 }
