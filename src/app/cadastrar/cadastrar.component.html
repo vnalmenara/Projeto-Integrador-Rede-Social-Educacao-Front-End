@@ -49,13 +49,13 @@
                     <div class="form-group text-color ">
                         <label for="confirmSenha"> Confirme sua senha </label>
 
-                        <input [(ngModel)]='user.senha' class="form-control" type="password" name="confirmSenha" id="confirmSenha" placeholder="Confirme sua senha">
+                        <input (keyup.enter)='cadastrar()' [(ngModel)]='user.senha' class="form-control" type="password" name="confirmSenha" id="confirmSenha" placeholder="Confirme sua senha">
                     </div>
                     <br>
 
                     <div class="d-flex justify-content-center">
                         <button type="submit" class="btn btn-vermelhoclaro text-white mr-3 mb-5" routerLink='/entrar'>CANCELAR</button>
-                        <button (click)='cadastrar()' type="submit" class="btn btn-verdepetrole text-white mb-5">CADASTRAR</button>
+                        <button (click)='cadastrar()' type="submit" class="btn btn-verdepetroleo text-white mb-5">CADASTRAR</button>
 
                     </div>
                 </div>

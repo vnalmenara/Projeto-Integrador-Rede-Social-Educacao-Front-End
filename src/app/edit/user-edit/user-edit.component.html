@@ -36,7 +36,7 @@
             <div class="form-group text-color ">
                 <label for="confirmSenha"> Confirme sua senha </label>
 
-                <input [(ngModel)]='user.senha' class="form-control" type="password" name="confirmSenha" id="confirmSenha" placeholder="Confirme sua senha">
+                <input (keyup.enter)='atualizar()' [(ngModel)]='user.senha' class="form-control" type="password" name="confirmSenha" id="confirmSenha" placeholder="Confirme sua senha">
             </div>
             <br>
 
