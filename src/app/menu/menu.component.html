@@ -4,30 +4,16 @@
       <img src="../../assets/img/logo-mathethai.png" alt="Logo Mathetai" />
     </p>
   </a>
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#conteudoNavbarSuportado"
-    aria-controls="conteudoNavbarSuportado"
-    aria-expanded="false"
-    aria-label="Alterna navegação"
-  >
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+    aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item dropdown pr-3 pl-3">
-        <a
-          class="nav-link dropdown-toggle fs-20 text-white"
-          href="#"
-          id="navbarDropdown"
-          role="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
+        <a class="nav-link dropdown-toggle fs-20 text-white" href="#" id="navbarDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Exatas
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -37,15 +23,8 @@
         </div>
       </li>
       <li class="nav-item dropdown pr-3">
-        <a
-          class="nav-link dropdown-toggle fs-20 text-white"
-          href="#"
-          id="navbarDropdown"
-          role="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
+        <a class="nav-link dropdown-toggle fs-20 text-white" href="#" id="navbarDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Humanas
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -60,21 +39,12 @@
         </div>
       </li>
       <li class="nav-item active pr-3">
-        <a class="nav-link fs-20" href="#" routerLink="/tema"
-          >Biológicas <span class="sr-only">(página atual)</span></a
-        >
+        <a class="nav-link fs-20" href="#" routerLink="/tema">Biológicas <span class="sr-only">(página atual)</span></a>
       </li>
 
       <li class="nav-item dropdown pr-3">
-        <a
-          class="nav-link dropdown-toggle fs-20 text-white"
-          href="#"
-          id="navbarDropdown"
-          role="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
+        <a class="nav-link dropdown-toggle fs-20 text-white" href="#" id="navbarDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-plus"></i>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -85,37 +55,22 @@
         </div>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0 mr-5">
-      <input
-        class="form-control mr-sm-2 input-pesquisa"
-        type="search"
-        placeholder="O que você quer estudar hoje?
-        "
-        aria-label="Pesquisar"
-      />
-      <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
-        Pesquisar
-      </button>
-    </form>
-        </ul>
-        <form class="form-inline my-2 my-lg-0 mr-5">
-            <input class="form-control mr-sm-2 input-pesquisa" type="search" placeholder="O que você quer estudar hoje?
-        " aria-label="Pesquisar">
-            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Pesquisar</button>
-        </form>
-
-        <li class="nav-item dropdown d-flex align-items-center">
-            <a class="nav-link dropdown-toggle fs-20 text-white" href="#" id="navbarDropdown" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src="{{foto}}" alt="Foto perfil" width="50px" height="50px"
-                    class="img-fluid rounded-circle">
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" [routerLink]="['/user-edit', id]" >Editar perfil</a>
-                <a (click)='sair()' class="dropdown-item" href="#">Sair</a>
-            </div>
-        </li>
-    </div>
-</nav>
     
-  
+    <form class="form-inline my-2 my-lg-0 mr-5">
+      <input class="form-control mr-sm-2 input-pesquisa" type="search" placeholder="O que você quer estudar hoje?
+        " aria-label="Pesquisar">
+      <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Pesquisar</button>
+    </form>
+
+    <li class="nav-item dropdown d-flex align-items-center">
+      <a class="nav-link dropdown-toggle fs-20 text-white" href="#" id="navbarDropdown" role="button"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <img src="{{foto}}" alt="Foto perfil" width="50px" height="50px" class="img-fluid rounded-circle">
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" [routerLink]="['/user-edit', id]">Editar perfil</a>
+        <a (click)='sair()' class="dropdown-item" href="#">Sair</a>
+      </div>
+    </li>
+  </div>
+</nav>

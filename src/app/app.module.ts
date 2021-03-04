@@ -26,7 +26,7 @@ import { QuemSomosComponent } from './quem-somos/quem-somos.component';
     TemasComponent,
     MenuLateralComponent,
     InicioComponent,
-    UserEditComponent
+    UserEditComponent,
     QuemSomosComponent
 
   ],

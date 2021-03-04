@@ -53,10 +53,10 @@
                 <div class="postInicio d-flex flex-column">
 
                     <div class="d-flex align-items-center mt-2 mr-4 ml-4 mb-3">
-                        <img class="imgPost mr-3" src="{{foto}}" alt="Mulher" />
+                        <img class="imgPost mr-3" src="{{foto}}" alt="Foto perfil" />
 
 
-                        <textarea [(ngModel)='postagem.descricao'] class="form-control" name="texto" id="texto" rows="1" placeholder="No que você está pensando hoje?" style="border-radius: 0.8rem" [(ngModel)]='postagem.descricao'></textarea>
+                        <textarea class="form-control" name="texto" id="texto" rows="1" placeholder="No que você está pensando hoje?" style="border-radius: 0.8rem" [(ngModel)]='postagem.descricao'></textarea>
                     </div>
                     <div class="postOpcoes d-flex flex-wrap justify-content-around align-items-center">
                         <button class="btn" data-toggle="modal" data-target="#novaImagem"> <i class="fas fa-photo-video"></i>Imagem</button>
@@ -164,10 +164,7 @@
         </div>
     </div>
 </div>
-<!-- Botão para acionar modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tags">
-    Abrir modal de demonstração
-  </button>
+
 
 <!-- Modal -->
 <div class="modal fade" id="tags" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">

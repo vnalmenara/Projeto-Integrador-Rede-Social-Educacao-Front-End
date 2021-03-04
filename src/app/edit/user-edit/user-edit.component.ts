@@ -62,7 +62,6 @@ export class UserEditComponent implements OnInit {
     this.authService.getByIdUser(id).subscribe((resp: User) => {
       this.user = resp
     })
-
   }
 
 }

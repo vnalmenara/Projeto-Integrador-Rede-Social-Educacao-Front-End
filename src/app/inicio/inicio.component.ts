@@ -20,10 +20,10 @@ export class InicioComponent implements OnInit {
   listaTemas: Tema[]
   tema: Tema = new Tema()
   idTema: number
-  user: User= new User()
-  idUser= environment.id
+  user: User = new User()
+  idUser = environment.id
   foto = environment.foto;
-  nomeUser=environment.nome_completo;
+  nomeUser = environment.nome_completo;
 
   constructor(
     private router: Router,
