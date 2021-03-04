@@ -10,9 +10,10 @@ import { TemasService } from '../service/temas.service';
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
-  styleUrls: ['./inicio.component.css']
+  styleUrls: ['./inicio.component.css'],
 })
 export class InicioComponent implements OnInit {
+
 
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
@@ -28,8 +29,8 @@ export class InicioComponent implements OnInit {
     private router: Router,
     private postagemService: PostagemService,
     private temasService: TemasService
-  ) { }
-
+  ) {}
+ 
   ngOnInit() {
     if (environment.token == '') {
       alert('Sua sessão expirou, faça o login novamente.')
@@ -38,7 +39,7 @@ export class InicioComponent implements OnInit {
 
     this.getAllPostagem()
   }
-
+  
   getAllTemas() {
     this.temasService.getAllTemas().subscribe((resp: Tema[]) => {
       this.listaTemas = resp;
@@ -60,7 +61,6 @@ export class InicioComponent implements OnInit {
   postar() {
     this.user.id = this.idUser
     this.postagem.usuario = this.user
-
     
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp;
@@ -69,6 +69,6 @@ export class InicioComponent implements OnInit {
       this.getAllPostagem();
 
     })
-  }
 
+  }
 }
