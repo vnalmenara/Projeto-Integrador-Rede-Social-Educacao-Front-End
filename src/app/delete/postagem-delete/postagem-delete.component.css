@@ -1,0 +1,36 @@
+.card {
+    border-radius: 0.8rem;
+    border: 1px solid #b6b6b6;
+}
+
+.postInicio {
+    background-color: #f3f2ef;
+    border: 1px solid #b6b6b6;
+    border-radius: 0.8rem;
+    padding: 8px;
+}
+
+.postInicio .imgPost {
+    width: 48px;
+    height: 48px;
+    box-sizing: border-box;
+    background-clip: content-box;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+
+.postInicio .postOpcoes a {
+    text-decoration: none;
+    color: #494949;
+}
+
+.botao-cadas {
+    background-color: #0F6D62;
+    color: white;
+}
+
+.botao-cancel {
+    background-color: #F44235;
+    color: white;
+}

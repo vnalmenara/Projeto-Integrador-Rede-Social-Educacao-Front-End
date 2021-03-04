@@ -75,8 +75,10 @@
         <div class="row mb-3" *ngFor='let item of listaPostagens'>
             <div class="col-md-10">
                 <div class="postInicio d-flex flex-column">
+                    
+                    
                     <!--Navbar-->
-                    <nav class="navbar navbar-light light-blue lighten-4">
+                    <nav class="navbar navbar-light light-blue lighten-4" *ngIf='item.usuario.id==idUser'>
 
 
 
@@ -92,10 +94,10 @@
                             <!-- Links -->
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="#">Editar <span class="sr-only">(current)</span></a>
+                                    <a [routerLink]="['/postagem-edit', item.id]"class="nav-link" href="#">Editar <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Deletar</a>
+                                    <a [routerLink]="['/postagem-delete', item.id]"class="nav-link" href="#">Deletar</a>
                                 </li>
 
                             </ul>
