@@ -15,6 +15,7 @@ import { TemasComponent } from './temas/temas.component';
 import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
 
 import { InicioComponent } from './inicio/inicio.component';
+import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { InicioComponent } from './inicio/inicio.component';
     CadastrarComponent,
     TemasComponent,
     MenuLateralComponent,
-    InicioComponent
+    InicioComponent,
+    QuemSomosComponent
   ],
   imports: [
     BrowserModule,

@@ -56,7 +56,7 @@
                         <img class="imgPost mr-3" src="{{foto}}" alt="Mulher" />
 
 
-                        <textarea class="form-control" name="texto" id="texto" rows="1" placeholder="No que você está pensando hoje?" style="border-radius: 0.8rem" [(ngModel)]='postagem.descricao'></textarea>
+                        <textarea [(ngModel)='postagem.descricao'] class="form-control" name="texto" id="texto" rows="1" placeholder="No que você está pensando hoje?" style="border-radius: 0.8rem" [(ngModel)]='postagem.descricao'></textarea>
                     </div>
                     <div class="postOpcoes d-flex flex-wrap justify-content-around align-items-center">
                         <button class="btn" data-toggle="modal" data-target="#novaImagem"> <i class="fas fa-photo-video"></i>Imagem</button>
@@ -72,7 +72,7 @@
         <!-- Fim: card post -->
 
         <!-- Inicio: postagens outros -->
-        <div class="row mb-3">
+        <div class="row mb-3" *ngFor='let item of listaPostagens'>
             <div class="col-md-10">
                 <div class="postInicio d-flex flex-column">
                     <!--Navbar-->
@@ -107,22 +107,21 @@
                     </nav>
                     <!--/.Navbar-->
                     <div class="d-flex align-items-center mt-2 mr-4 ml-4 mb-3">
-                        <img class="imgPost mr-3" src="../../assets/img/mulherperfilexemplo.jpg" alt="Mulher" />
+                        <img class="imgPost mr-3" src="{{item.usuario.foto}}" alt="Foto de perfil" />
                         <div>
                             <p style="font-size: 14px; line-height: 0%">
-                                <strong>Mulher aleatória</strong>
+                                <strong>{{item.usuario.nome_completo}}</strong>
                             </p>
-                            <p style="font-size: 10px; line-height: 0%">Mathetai</p>
                             <p style="font-size: 10px; line-height: 0%">
-                                24 de fevereiro de 2021
+                                {{item.data | date: 'dd/MM/yyyy'}}
                             </p>
                         </div>
                     </div>
                     <div class="conteudoTexto mb-3">
-                        Mathetaianos, alguém consegue me ajudar com essa questão de cálculo?
+                        {{item.descricao}}
                     </div>
                     <div class="conteudoMidia mb-3">
-                        <img src="../../assets/img/946312.jpg" alt="" style="width: 100%" />
+                        <img src="{{item.link}}" alt="" style="width: 100%" />
                     </div>
                     <div class="postOpcoes d-flex flex-wrap justify-content-around align-items-center">
                         <a href=""><i class="fas fa-thumbs-up"></i> Curtir</a>
@@ -132,36 +131,7 @@
                 </div>
             </div>
         </div>
-
-        <div class="row mb-3">
-            <div class="col-md-10">
-                <div class="postInicio d-flex flex-column">
-                    <div class="d-flex align-items-center mt-2 mr-4 ml-4 mb-3">
-                        <img class="imgPost mr-3" src="../../assets/img/david-beckham-768x576.jpg.webp" alt="Mulher" />
-                        <div>
-                            <p style="font-size: 14px; line-height: 0%">
-                                <strong>Mulher aleatória</strong>
-                            </p>
-                            <p style="font-size: 10px; line-height: 0%">Mathetai</p>
-                            <p style="font-size: 10px; line-height: 0%">
-                                24 de fevereiro de 2021
-                            </p>
-                        </div>
-                    </div>
-                    <div class="conteudoTexto mb-3">
-                        Oi galera, alguém saberia como me ajudar com essa questão de física?
-                    </div>
-                    <div class="conteudoMidia mb-3">
-                        <img src="../../assets/img/futebol-681x339.jpg" alt="" style="width: 100%" />
-                    </div>
-                    <div class="postOpcoes d-flex flex-wrap justify-content-around align-items-center">
-                        <a href=""><i class="fas fa-thumbs-up"></i> Curtir</a>
-                        <a href=""><i class="fas fa-comment"></i> Comentar</a>
-                        <a href=""><i class="fas fa-share-alt"></i> Compartilhar</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+      
         <!-- Fim: postagens outros -->
     </div>
 </div>
