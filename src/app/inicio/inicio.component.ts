@@ -13,15 +13,18 @@ import { TemasService } from '../service/temas.service';
   styleUrls: ['./inicio.component.css'],
 })
 export class InicioComponent implements OnInit {
+  postagem: Postagem = new Postagem();
+  tema: Tema = new Tema();
+  user: User = new User();
 
+  listaPostagens: Postagem[];
+  listaTemas: Tema[];
 
-  postagem: Postagem = new Postagem()
-  listaPostagens: Postagem[]
-  listaTemas: Tema[]
-  tema: Tema = new Tema()
-  idTema: number
-  user: User = new User()
-  idUser = environment.id
+  buscaDescricaoPostagem: string;
+  buscaTagPostagem: string;
+  idTema: number;
+
+  idUser = environment.id;
   foto = environment.foto;
   nomeUser = environment.nome_completo;
 
@@ -30,48 +33,70 @@ export class InicioComponent implements OnInit {
     private postagemService: PostagemService,
     private temasService: TemasService
   ) {}
- 
+
   ngOnInit() {
-
-    window.scroll(0,0)
-
+    window.scroll(0, 0);
     if (environment.token == '') {
-      alert('Sua sessão expirou, faça o login novamente.')
-      this.router.navigate(['/entrar'])
+      alert('Sua sessão expirou, faça o login novamente.');
+      this.router.navigate(['/entrar']);
     }
 
-    this.getAllPostagem()
+    this.getAllPostagem();
   }
-  
+
   getAllTemas() {
     this.temasService.getAllTemas().subscribe((resp: Tema[]) => {
       this.listaTemas = resp;
-    })
+    });
   }
 
   findByIdTema() {
     this.temasService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
       this.tema = resp;
-    })
+    });
+  }
+
+  findByDescricaoPostagem() {
+    if (this.buscaDescricaoPostagem == '') {
+      this.getAllPostagem();
+    } else {
+      this.postagemService
+        .getByDescricaoPostagem(this.buscaDescricaoPostagem)
+        .subscribe((r: Postagem[]) => {
+          this.listaPostagens = r;
+        });
+    }
+  }
+
+  findByTagPostagem() {
+    if (this.buscaDescricaoPostagem == '') {
+      this.getAllPostagem();
+    } else {
+      this.postagemService
+        .getByTagPostagem(this.buscaTagPostagem)
+        .subscribe((r: Postagem[]) => {
+          this.listaPostagens = r;
+        });
+    }
   }
 
   getAllPostagem() {
     this.postagemService.getAllPostagem().subscribe((resp: Postagem[]) => {
       this.listaPostagens = resp;
-    })
+    });
   }
 
   postar() {
-    this.user.id = this.idUser
-    this.postagem.usuario = this.user
-    
-    this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
-      this.postagem = resp;
-      alert('Postagem realizada com sucesso!')
-      this.postagem = new Postagem();
-      this.getAllPostagem();
+    this.user.id = this.idUser;
+    this.postagem.usuario = this.user;
 
-    })
-
+    this.postagemService
+      .postPostagem(this.postagem)
+      .subscribe((resp: Postagem) => {
+        this.postagem = resp;
+        alert('Postagem realizada com sucesso!');
+        this.postagem = new Postagem();
+        this.getAllPostagem();
+      });
   }
 }
