@@ -1,0 +1,72 @@
+.card {
+    border-radius: 0.8rem;
+    border: 1px solid #b6b6b6;
+}
+
+.postInicio {
+    background-color: #D0F0E9;
+    border: 1px solid #267866;
+    border-radius: 0.8rem;
+    padding: 8px;
+}
+
+.postInicio .imgPost {
+    width: 48px;
+    height: 48px;
+    box-sizing: border-box;
+    background-clip: content-box;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+.fas {
+    font-size: 1rem;
+}
+
+.fa-thumbs-up:hover {
+    color: #7ea4b3;
+}
+
+.fa-comment:hover {
+    color: #7ea4b3;
+}
+
+.fa-share-alt:hover {
+    color: #7ea4b3;
+}
+
+.fa-photo-video {
+    color: #77dd77;
+}
+
+.fa-user-tag {
+    color: #7ea4b3;
+}
+
+.fa-laugh {
+    color: #fbfb47;
+}
+
+.postInicio .postOpcoes a {
+    text-decoration: none;
+    color: #494949;
+}
+
+.botao-cadas {
+    background-color: #0F6D62;
+    color: white;
+}
+
+.botao-cancel {
+    background-color: #F44235;
+    color: white;
+}
+
+.fa-th{
+    color:  #0F6D62;
+    font-size: 24px;
+}
+
+.fa-trash{
+    color: #F44235;
+}

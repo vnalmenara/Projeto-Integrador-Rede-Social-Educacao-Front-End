@@ -9,8 +9,6 @@ import { Tema } from '../model/Tema';
 })
 export class TemasService {
 
-
-
   constructor(private http: HttpClient) { }
   
   token = {
@@ -23,7 +21,6 @@ export class TemasService {
 
   getByIdTema(id: number): Observable<Tema>{
     return this.http.get<Tema>(`http://localhost:8080/tema/${id}`, this.token)
-
   }
 }
 

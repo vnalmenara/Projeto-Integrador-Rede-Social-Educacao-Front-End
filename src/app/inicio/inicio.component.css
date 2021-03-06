@@ -4,8 +4,8 @@
 }
 
 .postInicio {
-    background-color: #f3f2ef;
-    border: 1px solid #b6b6b6;
+    background-color: #D0F0E9;
+    border: 1px solid #267866;
     border-radius: 0.8rem;
     padding: 8px;
 }
@@ -44,7 +44,7 @@
 }
 
 .fa-laugh {
-    color: #fbfb47;
+    color: #F4B183;
 }
 
 .postInicio .postOpcoes a {
@@ -60,4 +60,13 @@
 .botao-cancel {
     background-color: #F44235;
     color: white;
+}
+
+.fa-th{
+    color:  #0F6D62;
+    font-size: 24px;
+}
+
+.fa-trash{
+    color: #F44235;
 }
