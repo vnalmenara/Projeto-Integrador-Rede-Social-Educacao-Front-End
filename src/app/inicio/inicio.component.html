@@ -56,15 +56,19 @@
                         <img class="imgPost mr-3" src="{{foto}}" alt="Foto perfil" />
 
 
-                        <textarea class="form-control" name="texto" id="texto" rows="1" placeholder="No que você está pensando hoje?" style="border-radius: 0.8rem" [(ngModel)]='postagem.descricao'></textarea>
+
+                        <textarea data-toggle="modal" data-target="#novaPostagem" class="form-control" name="texto"
+                            id="texto" rows="1" placeholder="No que você está pensando hoje?"
+                            style="border-radius: 0.8rem"></textarea>
+
                     </div>
                     <div class="postOpcoes d-flex flex-wrap justify-content-around align-items-center">
-                        <button class="btn" data-toggle="modal" data-target="#novaImagem"> <i class="fas fa-photo-video"></i>Imagem</button>
+                        <button class="btn"><i class="fas fa-photo-video"></i>Imagem</button>
                         <button class="btn"><i class="fas fa-user-tag"></i> Marcar pessoas</button>
-                        <button class="btn" data-toggle="modal" data-target="#tags"><i class="fas fa-tag" aria-hidden="true"></i>
+                        <button class="btn"><i class="fas fa-tag" aria-hidden="true"></i>
                             Adicionar Tags</button>
 
-                        <button class="btn btn-success text-white" (click)='postar()'>Publicar</button>
+                        <button class="btn btn-success text-white">Publicar</button>
                     </div>
                 </div>
             </div>
@@ -75,8 +79,8 @@
         <div class="row mb-3" *ngFor='let item of listaPostagens'>
             <div class="col-md-10">
                 <div class="postInicio d-flex flex-column">
-                    
-                    
+
+
                     <!--Navbar-->
                     <nav class="navbar navbar-light light-blue lighten-4" *ngIf='item.usuario.id==idUser'>
 
@@ -84,8 +88,10 @@
 
                         <!-- Collapse button -->
                         <div class="mr-5">
-                            <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
-          class="fas fa-bars fa-1x"></i></span></button>
+                            <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1"
+                                aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
+                                        class="fas fa-bars fa-1x"></i></span></button>
                         </div>
 
                         <!-- Collapsible content -->
@@ -94,10 +100,12 @@
                             <!-- Links -->
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item active">
-                                    <a [routerLink]="['/postagem-edit', item.id]"class="nav-link" href="#">Editar <span class="sr-only">(current)</span></a>
+                                    <a [routerLink]="['/postagem-edit', item.id]" class="nav-link" href="#">Editar <span
+                                            class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a [routerLink]="['/postagem-delete', item.id]"class="nav-link" href="#">Deletar</a>
+                                    <a [routerLink]="['/postagem-delete', item.id]" class="nav-link"
+                                        href="#">Deletar</a>
                                 </li>
 
                             </ul>
@@ -122,6 +130,9 @@
                     <div class="conteudoTexto mb-3">
                         {{item.descricao}}
                     </div>
+                    <div class="conteudoTexto mb-3">
+                        {{item.tag}}
+                    </div>
                     <div class="conteudoMidia mb-3">
                         <img src="{{item.link}}" alt="" style="width: 100%" />
                     </div>
@@ -133,60 +144,54 @@
                 </div>
             </div>
         </div>
-      
+
         <!-- Fim: postagens outros -->
     </div>
 </div>
 
 
+
 <!-- Modal -->
-<div class="modal fade" id="novaImagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+<div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+    aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="TituloModalCentralizado">Adicionar imagem</h5>
+                <h5 class="modal-title" id="novaPostagem"><img class="img-post img-fluid"
+                        src="../../assets/img/padrao-perfil.jpg" alt=""> Nova Postagem</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-          <span aria-hidden="true">&times;</span>
-        </button>
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
+
             <div class="modal-body">
                 <div class="form-group">
-                    <label for="linkimagem">Link da Imagem</label>
-                    <input type="text" class="form-control" id="linkimagem" placeholder="Link da Imagem">
+                    <label for="titulo">Criar Publicação</label>
+                    <textarea class="form-control" name="texto" id="texto" rows="3"
+                        placeholder="No que você esta pensando hoje?" [(ngModel)]='postagem.descricao'></textarea>
                 </div>
+
+
                 <div class="form-group">
-                    <label for="AdicionarLegenda">Adicionar Legenda</label>
-                    <input type="text" class="form-control" id="AdicionarLegenda" placeholder="Adicionar Legenda">
+                    <label for="imagem">Imagem</label>
+                    <textarea class="form-control" name="imagem" id="imagem" rows="1"
+                        placeholder="Adicione URL de imagem"[(ngModel)]='postagem.link'></textarea>
+
+
+                    <div class="form-group">
+                        <label for="titulo">Tags</label>
+                        <textarea class="form-control" name="texto" id="texto" rows="1"
+                            placeholder="Adicione Tags" [(ngModel)]='postagem.tag' ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="text">Marcar pessoas</label>
+                    </div>
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn botao-cancel" data-dismiss="modal">Fechar</button>
-                <button type="button" class="btn botao-cadas">Adicionar Imagem</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<!-- Modal -->
-<div class="modal fade" id="tags" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="tags">Adicionar Tags</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-            <span aria-hidden="true">&times;</span>
-          </button>
-            </div>
-            <div class="modal-body">
-                <div class="form-group">
-                    <label for="AdicionarTags">Adicionar Tags</label>
-                    <input type="text" class="form-control" id="AdicionarTags" placeholder="Adicionar Tags">
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn botao-cancel" data-dismiss="modal">Fechar</button>
-                <button type="button" class="btn botao-cadas">Adicionar Tags</button>
+                <button type="button" class="btn botao-cancel" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn botao-cadas" (click)='postar()' data-dismiss="modal">Publicar</button>
             </div>
         </div>
     </div>
