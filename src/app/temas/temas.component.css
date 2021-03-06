@@ -1,14 +1,12 @@
-.container-fluid{
+.container-fluid {
   margin: 0;
   padding: 0;
-  
 }
 
-h1{
-  background-color: #0F6D62;
+h1 {
+  background-color: #0f6d62;
   padding: 10px 0 20px 0;
 }
-
 
 .card {
   border-radius: 0.8rem;
@@ -16,7 +14,7 @@ h1{
 }
 
 .postInicio {
-  background-color: #D0F0E9;
+  background-color: #d0f0e9;
   border: 1px solid #267866;
   border-radius: 0.8rem;
   padding: 8px;
@@ -56,7 +54,7 @@ h1{
 }
 
 .fa-laugh {
-  color: #F4B183;
+  color: #f4b183;
 }
 
 .postInicio .postOpcoes a {
@@ -65,20 +63,20 @@ h1{
 }
 
 .botao-cadas {
-  background-color: #0F6D62;
+  background-color: #0f6d62;
   color: white;
 }
 
 .botao-cancel {
-  background-color: #F44235;
+  background-color: #f44235;
   color: white;
 }
 
-.fa-th{
-  color:  #0F6D62;
+.fa-th {
+  color: #0f6d62;
   font-size: 24px;
 }
 
-.fa-trash{
-  color: #F44235;
+.fa-trash {
+  color: #f44235;
 }
