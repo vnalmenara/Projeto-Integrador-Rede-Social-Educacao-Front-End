@@ -16,7 +16,7 @@ const routes: Routes = [
   {path: 'entrar', component: EntrarComponent},
   {path: 'cadastrar', component: CadastrarComponent},
   {path: 'inicio', component: InicioComponent},
-  {path:'tema', component: TemasComponent},
+  {path:'tema/:id', component: TemasComponent},
   {path: 'user-edit/:id', component: UserEditComponent},
   {path: 'quem-somos', component: QuemSomosComponent},
   {path: 'postagem-edit/:id', component:PostagemEditComponent},
@@ -25,7 +25,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { onSameUrlNavigation: 'reload' })],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
