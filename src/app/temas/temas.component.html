@@ -11,7 +11,10 @@
 
     <div class="col-md-9">
       <!-- Inicio: postagens outros -->
-      <div class="row mb-3" *ngFor="let item of listaPostagens">
+      <div
+        class="row mb-3"
+        *ngFor="let item of listaPostagens | orderBy: key:reverse"
+      >
         <div class="col-md-10">
           <div class="postInicio d-flex flex-column">
             <!--Navbar-->
