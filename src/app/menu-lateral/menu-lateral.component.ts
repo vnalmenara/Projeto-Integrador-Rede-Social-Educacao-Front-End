@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
 import { User } from '../model/User';
+import { AlertasService } from '../service/alertas.service';
 import { PostagemService } from '../service/postagem.service';
 import { TemasService } from '../service/temas.service';
 
@@ -19,7 +20,8 @@ export class MenuLateralComponent implements OnInit {
   constructor(
     private router: Router,
     private postagemService: PostagemService,
-    private temasService: TemasService
+    private temasService: TemasService,
+    private alertas: AlertasService
   ) {}
 
   ngOnInit(): void {}
@@ -32,7 +34,7 @@ export class MenuLateralComponent implements OnInit {
       .postPostagem(this.postagem)
       .subscribe((resp: Postagem) => {
         this.postagem = resp;
-        alert('Postagem realizada com sucesso!');
+        this.alertas.showAlertSuccess('Postagem realizada com sucesso!');
         this.postagem = new Postagem();
         this.getAllPostagem();
       });

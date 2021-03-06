@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+
 import { TemasService } from '../service/temas.service';
 
 @Component({
@@ -16,7 +17,8 @@ export class MenuComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private temaService: TemasService
+    private temaService: TemasService,
+   
   ) { }
 
   ngOnInit() {
