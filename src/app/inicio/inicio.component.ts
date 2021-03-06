@@ -13,15 +13,17 @@ import { TemasService } from '../service/temas.service';
   styleUrls: ['./inicio.component.css'],
 })
 export class InicioComponent implements OnInit {
-
-
-  postagem: Postagem = new Postagem()
-  listaPostagens: Postagem[]
-  listaTemas: Tema[]
-  tema: Tema = new Tema()
-  idTema: number
-  user: User = new User()
-  idUser = environment.id
+  user: User = new User();
+  tema: Tema = new Tema();
+  postagem: Postagem = new Postagem();
+  curtida = this.postagem.interacao;
+  descricao = this.postagem.descricao;
+  listaPostagens: Postagem[];
+  listaTemas: Tema[];
+  buscaDescricaoPostagem: string;
+  buscaTagPostagem: string;
+  idTema: number;
+  idUser = environment.id;
   foto = environment.foto;
   nomeUser = environment.nome_completo;
 
@@ -30,48 +32,91 @@ export class InicioComponent implements OnInit {
     private postagemService: PostagemService,
     private temasService: TemasService
   ) {}
- 
-  ngOnInit() {
 
-    window.scroll(0,0)
+  ngOnInit() {
+    window.scroll(0, 0);
 
     if (environment.token == '') {
-      alert('Sua sessão expirou, faça o login novamente.')
-      this.router.navigate(['/entrar'])
+      alert('Sua sessão expirou, faça o login novamente.');
+      this.router.navigate(['/entrar']);
     }
 
-    this.getAllPostagem()
+    this.getAllPostagem();
   }
-  
+
   getAllTemas() {
     this.temasService.getAllTemas().subscribe((resp: Tema[]) => {
       this.listaTemas = resp;
-    })
+    });
   }
 
   findByIdTema() {
     this.temasService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
       this.tema = resp;
-    })
+    });
+  }
+
+  findByDescricaoPostagem() {
+    if (this.buscaDescricaoPostagem == '') {
+      this.getAllPostagem();
+    } else {
+      this.postagemService
+        .getByDescricaoPostagem(this.buscaDescricaoPostagem)
+        .subscribe((r: Postagem[]) => {
+          this.listaPostagens = r;
+        });
+    }
+  }
+
+  findByTagPostagem() {
+    if (this.buscaDescricaoPostagem == '') {
+      this.getAllPostagem();
+    } else {
+      this.postagemService
+        .getByTagPostagem(this.buscaTagPostagem)
+        .subscribe((r: Postagem[]) => {
+          this.listaPostagens = r;
+        });
+    }
   }
 
   getAllPostagem() {
     this.postagemService.getAllPostagem().subscribe((resp: Postagem[]) => {
       this.listaPostagens = resp;
-    })
+    });
   }
 
   postar() {
-    this.user.id = this.idUser
-    this.postagem.usuario = this.user
-    
-    this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
-      this.postagem = resp;
-      alert('Postagem realizada com sucesso!')
-      this.postagem = new Postagem();
-      this.getAllPostagem();
+    this.user.id = this.idUser;
+    this.postagem.usuario = this.user;
 
-    })
+    this.postagemService
+      .postPostagem(this.postagem)
+      .subscribe((resp: Postagem) => {
+        this.postagem = resp;
+        alert('Postagem realizada com sucesso!');
+        this.postagem = new Postagem();
+        this.getAllPostagem();
+      });
+  }
 
+  curtir() {
+    if (this.curtida == null) {
+      this.curtida = 1;
+      //this.postagem.interacao = this.curtida
+
+      // this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem) => {
+      //  this.postagem = resp;
+      // })
+    } else {
+      this.curtida += 1;
+      //this.postagem.interacao = this.curtida
+
+      //this.postagem.descricao = this.descricao
+
+      // this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem) => {
+      //this.postagem = resp;
+      // })
+    }
   }
 }

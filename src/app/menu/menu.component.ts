@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { TemasService } from '../service/temas.service';
 
 @Component({
   selector: 'app-menu',
@@ -13,7 +14,9 @@ export class MenuComponent implements OnInit {
   id = environment.id
 
   constructor(
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute,
+    private temaService: TemasService
   ) { }
 
   ngOnInit() {

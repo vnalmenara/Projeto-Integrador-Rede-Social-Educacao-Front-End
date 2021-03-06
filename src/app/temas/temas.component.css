@@ -1,22 +1,21 @@
-.container-fluid{
+.container-fluid {
   margin: 0;
   padding: 0;
-  
 }
 
-h1{
-  background-color: #0F6D62;
+h1 {
+  background-color: #0f6d62;
   padding: 10px 0 20px 0;
 }
 
-
 .card {
-  border-radius: 20px;
+  border-radius: 0.8rem;
+  border: 1px solid #b6b6b6;
 }
 
 .postInicio {
-  background-color: #f3f2ef;
-  border: 1px solid #b6b6b6;
+  background-color: #d0f0e9;
+  border: 1px solid #267866;
   border-radius: 0.8rem;
   padding: 8px;
 }
@@ -29,20 +28,55 @@ h1{
   border-radius: 50%;
   background-size: cover;
 }
+
 .fas {
-  font-size: 1.25rem;
+  font-size: 1rem;
+}
+
+.fa-thumbs-up:hover {
+  color: #7ea4b3;
+}
+
+.fa-comment:hover {
+  color: #7ea4b3;
+}
+
+.fa-share-alt:hover {
+  color: #7ea4b3;
 }
 
 .fa-photo-video {
   color: #77dd77;
 }
+
 .fa-user-tag {
   color: #7ea4b3;
 }
+
 .fa-laugh {
-  color: #fbfb47;
+  color: #f4b183;
 }
+
 .postInicio .postOpcoes a {
   text-decoration: none;
   color: #494949;
+}
+
+.botao-cadas {
+  background-color: #0f6d62;
+  color: white;
+}
+
+.botao-cancel {
+  background-color: #f44235;
+  color: white;
+}
+
+.fa-th {
+  color: #0f6d62;
+  font-size: 24px;
+}
+
+.fa-trash {
+  color: #f44235;
 }
