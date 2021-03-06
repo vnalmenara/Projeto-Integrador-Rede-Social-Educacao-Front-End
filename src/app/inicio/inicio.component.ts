@@ -16,6 +16,8 @@ export class InicioComponent implements OnInit {
 
 
   postagem: Postagem = new Postagem()
+  curtida = this.postagem.interacao
+  descricao = this.postagem.descricao
   listaPostagens: Postagem[]
   listaTemas: Tema[]
   tema: Tema = new Tema()
@@ -72,6 +74,29 @@ export class InicioComponent implements OnInit {
       this.getAllPostagem();
 
     })
+  }
+
+  curtir(){
+    if(this.curtida == null){
+      this.curtida = 1;
+      //this.postagem.interacao = this.curtida
+
+     // this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem) => {
+      //  this.postagem = resp;
+     // })
+
+    } else{
+      this.curtida +=1;
+      //this.postagem.interacao = this.curtida
+
+      //this.postagem.descricao = this.descricao
+
+     // this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem) => {
+        //this.postagem = resp;
+     // })
+    }
+
+    
 
   }
 }
