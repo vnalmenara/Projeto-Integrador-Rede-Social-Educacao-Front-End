@@ -16,16 +16,23 @@ export class InicioComponent implements OnInit {
   user: User = new User();
   tema: Tema = new Tema();
   postagem: Postagem = new Postagem();
+
   curtida = this.postagem.interacao;
   descricao = this.postagem.descricao;
+
   listaPostagens: Postagem[];
   listaTemas: Tema[];
+
   buscaDescricaoPostagem: string;
   buscaTagPostagem: string;
   idTema: number;
+
   idUser = environment.id;
   foto = environment.foto;
   nomeUser = environment.nome_completo;
+
+  key = 'data';
+  reverse = true;
 
   constructor(
     private router: Router,
