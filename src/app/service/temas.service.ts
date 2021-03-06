@@ -9,8 +9,6 @@ import { Tema } from '../model/Tema';
 })
 export class TemasService {
 
-
-
   constructor(private http: HttpClient) { }
   
   token = {
