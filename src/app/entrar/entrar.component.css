@@ -24,3 +24,18 @@
   width: 150px;
   align-items: center;
 }
+
+.imgFlip {
+  rotate: 60deg;
+}
+
+@media (min-width: 360px) {
+  i {
+    font-size: 20px;
+  }
+}
+@media (min-width: 768px) {
+  i {
+    font-size: 35px;
+  }
+}

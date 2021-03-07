@@ -24,3 +24,17 @@ ul.social-network li {
   max-width: 85%;
   height: auto;
 }
+
+/* Responsividade */
+@media (min-width: 360px) {
+  .imgD {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (min-width: 768px) {
+  .imgD {
+    display: flex;
+    flex-direction: row;
+  }
+}
