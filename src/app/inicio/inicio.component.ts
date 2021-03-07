@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
 import { User } from '../model/User';
+import { AlertasService } from '../service/alertas.service';
 import { PostagemService } from '../service/postagem.service';
 import { TemasService } from '../service/temas.service';
 
@@ -16,28 +17,36 @@ export class InicioComponent implements OnInit {
   user: User = new User();
   tema: Tema = new Tema();
   postagem: Postagem = new Postagem();
+
   curtida = this.postagem.interacao;
   descricao = this.postagem.descricao;
+
   listaPostagens: Postagem[];
   listaTemas: Tema[];
+
   buscaDescricaoPostagem: string;
   buscaTagPostagem: string;
   idTema: number;
+
   idUser = environment.id;
   foto = environment.foto;
   nomeUser = environment.nome_completo;
 
+  key = 'data';
+  reverse = true;
+
   constructor(
     private router: Router,
     private postagemService: PostagemService,
-    private temasService: TemasService
+    private temasService: TemasService,
+    private alertas: AlertasService,
   ) {}
 
   ngOnInit() {
     window.scroll(0, 0);
 
     if (environment.token == '') {
-      alert('Sua sessão expirou, faça o login novamente.');
+      this.alertas.showAlertInfo('Sua sessão expirou, faça o login novamente.');
       this.router.navigate(['/entrar']);
     }
 
@@ -94,7 +103,7 @@ export class InicioComponent implements OnInit {
       .postPostagem(this.postagem)
       .subscribe((resp: Postagem) => {
         this.postagem = resp;
-        alert('Postagem realizada com sucesso!');
+        this.alertas.showAlertSuccess('Postagem realizada com sucesso!');
         this.postagem = new Postagem();
         this.getAllPostagem();
       });

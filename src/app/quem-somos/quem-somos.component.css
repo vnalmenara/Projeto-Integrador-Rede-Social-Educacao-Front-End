@@ -16,6 +16,11 @@ ul.social-network li {
 
 .fab {
   font-size: 35pt;
-  color: black;
+  color: #0f6d62;
   padding: 10px;
+}
+
+.logoMathetai {
+  max-width: 85%;
+  height: auto;
 }

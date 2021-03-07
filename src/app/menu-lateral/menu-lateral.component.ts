@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
 import { User } from '../model/User';
+import { AlertasService } from '../service/alertas.service';
 import { PostagemService } from '../service/postagem.service';
 import { TemasService } from '../service/temas.service';
 
@@ -27,9 +28,9 @@ export class MenuLateralComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private postagemService: PostagemService,
-    private temasService: TemasService
-    ) {}
-    
+    private temasService: TemasService,
+    private alertas: AlertasService
+  ) {}
 
   ngOnInit(){}
 
@@ -43,7 +44,7 @@ export class MenuLateralComponent implements OnInit {
       .postPostagem(this.postagem)
       .subscribe((resp: Postagem) => {
         this.postagem = resp;
-        alert('Postagem realizada com sucesso!');
+        this.alertas.showAlertSuccess('Postagem realizada com sucesso!');
         this.postagem = new Postagem();
         
       });

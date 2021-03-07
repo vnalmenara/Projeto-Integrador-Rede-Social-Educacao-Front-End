@@ -1,50 +1,103 @@
 <div class="container mb-5 mt-5">
-    <div class="row">
-        <div class="col-md-12">
-            <h1 class="text-center">ATUALIZAR CADASTRO</h1>
-        </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-center texto-negrito">ATUALIZAR CADASTRO</h1>
     </div>
+  </div>
 
-    <div class="row  d-flex align-items-center flex-column mt-5">
-        <div class="col-md-10">
-           
-            <div class=" form-group text-color">
-                <label for="nome"> Nome Completo </label>
+  <div class="row d-flex align-items-center flex-column mt-5">
+    <div class="col-md-10">
+      <div class="form-group text-color">
+        <label for="nome"> Nome Completo </label>
 
-                <input [(ngModel)]='user.nome_completo' class="form-control" type="text" name="nome" id="nome " placeholder="Nome">
-            </div>
-            <div class="form-group text-color ">
-                <label for="email"> E-mail </label>
-                <input [(ngModel)]='user.email' class="form-control" type="text" name="email" id="email" placeholder="Insira seu e-mail">
-            </div>
+        <input
+          [(ngModel)]="user.nome_completo"
+          class="form-control"
+          type="text"
+          name="nome"
+          id="nome "
+          placeholder="Nome"
+        />
+      </div>
+      <div class="form-group text-color">
+        <label for="email"> E-mail </label>
+        <input
+          [(ngModel)]="user.email"
+          class="form-control"
+          type="text"
+          name="email"
+          id="email"
+          placeholder="Insira seu e-mail"
+        />
+      </div>
 
-            <div class="form-group text-color">
-                <label for="link-foto"> Link da foto </label>
-                <input [(ngModel)]='user.foto' class="form-control" type="text" name="link-foto" id="link-foto" placeholder="Link da sua foto">
-            </div>
+      <div class="form-group text-color">
+        <label for="link-foto"> Link da foto </label>
+        <input
+          [(ngModel)]="user.foto"
+          class="form-control"
+          type="text"
+          name="link-foto"
+          id="link-foto"
+          placeholder="Link da sua foto"
+        />
+      </div>
 
-            <div class="form-group text-color">
-                <label for="contato"> Contato </label>
-                <input [(ngModel)]='user.contato' class="form-control" type="text" name="contato" id="contato" placeholder="Informe seu whatsapp ou rede social de sua preferência">
-            </div>
+      <div class="form-group text-color">
+        <label for="contato"> Contato </label>
+        <input
+          [(ngModel)]="user.contato"
+          class="form-control"
+          type="text"
+          name="contato"
+          id="contato"
+          placeholder="Informe seu whatsapp ou rede social de sua preferência"
+        />
+      </div>
 
-            <div class="form-group text-color">
-                <label for="Senha"> Senha </label>
-                <input (input)='confirmSenha($event)' class="form-control " type="password" name="senha" id="senha" placeholder="Senha">
-            </div>
+      <div class="form-group text-color">
+        <label for="Senha"> Senha </label>
+        <input
+          (input)="confirmSenha($event)"
+          class="form-control"
+          type="password"
+          name="senha"
+          id="senha"
+          placeholder="Senha"
+        />
+      </div>
 
-            <div class="form-group text-color ">
-                <label for="confirmSenha"> Confirme sua senha </label>
+      <div class="form-group text-color">
+        <label for="confirmSenha"> Confirme sua senha </label>
 
-                <input (keyup.enter)='atualizar()' [(ngModel)]='user.senha' class="form-control" type="password" name="confirmSenha" id="confirmSenha" placeholder="Confirme sua senha">
-            </div>
-            <br>
+        <input
+          (keyup.enter)="atualizar()"
+          [(ngModel)]="user.senha"
+          class="form-control"
+          type="password"
+          name="confirmSenha"
+          id="confirmSenha"
+          placeholder="Confirme sua senha"
+        />
+      </div>
+      <br />
 
-            <div class="d-flex justify-content-center">
-                <button type="submit" class="btn btn-vermelhoclaro text-white mr-3 mb-5" routerLink='/inicio'>CANCELAR</button>
-                <button (click)='atualizar()' type="submit" class="btn btn-verdepetroleo text-white mb-5">ATUALIZAR</button>
-
-            </div>
-        </div>
+      <div class="d-flex justify-content-center">
+        <button
+          type="submit"
+          class="btn btn-vermelhoclaro text-white mr-3 mb-5 texto-negrito p-2"
+          routerLink="/inicio"
+        >
+          Cancelar
+        </button>
+        <button
+          (click)="atualizar()"
+          type="submit"
+          class="texto-negrito btn btn-verdepetroleo text-white mb-5 p-2"
+        >
+          Atualizar
+        </button>
+      </div>
     </div>
+  </div>
 </div>
