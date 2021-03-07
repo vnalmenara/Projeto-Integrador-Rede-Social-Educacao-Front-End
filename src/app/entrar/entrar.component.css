@@ -1,35 +1,26 @@
-
-.btn-vermelhoclaro{
-    background-color:  #F44235;
+.btn-vermelhoclaro {
+  background-color: #f44235;
 }
 
-.btn-verdepetroleo{
-    background-color: #0F6D62;
+.btn-verdepetroleo {
+  background-color: #0f6d62;
 }
 
-.btn-verdeclaro{
-    background-color:#3BBBA0;
+.btn-verdeclaro {
+  background-color: #3bbba0;
 }
 
-.tmn{
-    width: 150px;
-    display: flex;
-    align-items: center;
+.tmn {
+  width: 150px;
+  display: flex;
+  align-items: center;
 }
 
-.plan-color{
-    color: #0F6D62;
+.plan-color {
+  color: #0f6d62;
 }
 
-.fs-35{
-    font-size: 35px;
-}
-
-.fs20{
-    font-size: 20px;
-}
-
-.tmn-logo{
-    width: 150px;
-    align-items: center;
+.tmn-logo {
+  width: 150px;
+  align-items: center;
 }

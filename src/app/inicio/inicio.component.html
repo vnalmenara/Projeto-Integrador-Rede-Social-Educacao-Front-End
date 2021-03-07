@@ -10,7 +10,7 @@
             src="../../assets/img/padrao-perfil.jpg"
             alt=""
           />
-          <h3>Buscas</h3>
+          <h3 class="texto-negrito">Buscar</h3>
         </div>
         <div class="form-group">
           <label for="buscaDescricao"><strong>Descrição:</strong></label>
@@ -18,7 +18,7 @@
             type="text"
             class="form-control"
             id="buscaDescricao"
-            placeholder="Digite a descrição a buscar"
+            placeholder="Buscar..."
             [(ngModel)]="buscaDescricaoPostagem"
             (keyup)="findByDescricaoPostagem()"
           />
@@ -26,52 +26,7 @@
       </div>
     </div>
     <div class="card mr-5">
-      <div
-        class="card-body text-center d-flex justify-content-between flex-column"
-        style="height: 80vh"
-      >
-        <h3 class="card-title mb-5">Top da semana</h3>
-        <div class="row">
-          <div class="col-md-2 d-flex -flex-column justify-content-between">
-            <h4><strong>#1</strong></h4>
-          </div>
-          <div class="col-md-10">
-            <h4>Probabilidade e estatística</h4>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-2 d-flex -flex-column justify-content-between">
-            <h4><strong>#2</strong></h4>
-          </div>
-          <div class="col-md-10">
-            <h4>Cálculo I</h4>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-2 d-flex -flex-column justify-content-between">
-            <h4><strong>#3</strong></h4>
-          </div>
-          <div class="col-md-10">
-            <h4>Morfologia e Taxonomia</h4>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-2 d-flex -flex-column justify-content-between">
-            <h4><strong>#4</strong></h4>
-          </div>
-          <div class="col-md-10">
-            <h4>Hannah Arendt</h4>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-2 d-flex -flex-column justify-content-between">
-            <h4><strong>#5</strong></h4>
-          </div>
-          <div class="col-md-10">
-            <h4>Globalização</h4>
-          </div>
-        </div>
-      </div>
+      <img src="https://i.imgur.com/pSm4n8i.jpg" alt="" />
     </div>
   </div>
   <div class="col-md-9">
@@ -79,7 +34,7 @@
     <div class="row mb-3">
       <div class="col-md-10">
         <div class="postInicio d-flex flex-column">
-          <div class="d-flex align-items-center mt-2 mr-4 ml-4 mb-3">
+          <div class="d-flex align-items-center mt-2 mr-4 mb-3 ml-4">
             <img
               class="imgPost mr-3"
               src="{{ foto }}"
@@ -102,7 +57,11 @@
           <div
             class="postOpcoes d-flex flex-wrap justify-content-around align-items-center"
           >
-            <button class="btn" data-toggle="modal" data-target="#novaPostagem">
+            <button
+              class="btn texto-negrito"
+              data-toggle="modal"
+              data-target="#novaPostagem"
+            >
               <i class="fas fa-photo-video"></i> Imagem
             </button>
 
@@ -199,7 +158,7 @@
             {{ item.descricao }}
           </div>
 
-          <div class="conteudoTexto mb-3">
+          <div class="conteudoTexto mb-1 mt-2 ml-5 mr-5 texto-negrito">
             {{ item.tag }}
           </div>
           <div class="conteudoMidia mb-1">
@@ -236,7 +195,7 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="novaPostagem">
+        <h5 class="modal-title texto-negrito" id="novaPostagem">
           <img
             class="img-post img-fluid"
             src="../../assets/img/padrao-perfil.jpg"

@@ -1,34 +1,36 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12">
-      <h1 class="text-center text-white mb-5">{{ tema.assunto }}</h1>
+      <h1 class="text-center text-white mb-5 texto-negrito">
+        {{ tema.assunto }}
+      </h1>
     </div>
   </div>
   <div class="row">
     <div class="col-md-3">
       <!--Trazendo menu lateral e rezando p dar certo!-->
-      <div class="d-flex flex-column justify-content-start sidebar">
+      <div class="d-flex flex-column justify-content-start">
         <button
           type="button"
-          class="btn btn-barra mb-2 p-3"
+          class="btn btn-barra mb-2 p-2"
           data-toggle="modal"
           data-target="#pergunta"
         >
           Fazer uma pergunta
         </button>
-      
+
         <button
           type="button"
-          class="btn btn-barra mb-2 p-3"
+          class="btn btn-barra mb-2 p-2"
           data-toggle="modal"
           data-target="#comunidades"
         >
           Comunidades
         </button>
-      
+
         <button
           type="button"
-          class="btn btn-barra mb-2 p-3"
+          class="btn btn-barra mb-2 p-2"
           data-toggle="modal"
           data-target="#mini-mentoria"
         >
@@ -36,23 +38,23 @@
         </button>
         <button
           type="button"
-          class="btn btn-barra mb-2 p-3"
+          class="btn btn-barra mb-2 p-2"
           data-toggle="modal"
           data-target="#materiais"
         >
           Materiais compartilhados
         </button>
-      
+
         <button
           type="button"
-          class="btn btn-barra mb-2 p-3"
+          class="btn btn-barra mb-2 p-2"
           data-toggle="modal"
           data-target="#eventos"
         >
           Eventos
         </button>
       </div>
-      
+
       <!-- Modal Pergunta-->
       <div
         class="modal fade"
@@ -65,7 +67,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="novaPostagem">
+              <h5 class="modal-title texto-negrito" id="novaPostagem">
                 <img
                   class="img-post img-fluid"
                   src="../../assets/img/padrao-perfil.jpg"
@@ -82,7 +84,7 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-      
+
             <div class="modal-body">
               <div class="form-group">
                 <label for="titulo">Criar Publicação</label>
@@ -95,7 +97,7 @@
                   [(ngModel)]="postagem.descricao"
                 ></textarea>
               </div>
-      
+
               <div class="form-group">
                 <label for="imagem">Imagem</label>
                 <textarea
@@ -106,7 +108,7 @@
                   placeholder="Adicione URL de imagem"
                   [(ngModel)]="postagem.link"
                 ></textarea>
-      
+
                 <div class="form-group">
                   <label for="titulo">Tags</label>
                   <textarea
@@ -118,14 +120,18 @@
                     [(ngModel)]="postagem.tag"
                   ></textarea>
                 </div>
-      
+
                 <div class="form-group">
                   <label for="text">Marcar pessoas</label>
                 </div>
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn botao-cancel" data-dismiss="modal">
+              <button
+                type="button"
+                class="btn botao-cancel"
+                data-dismiss="modal"
+              >
                 Cancelar
               </button>
               <button
@@ -140,7 +146,7 @@
           </div>
         </div>
       </div>
-      
+
       <!-- Modal Comunidades-->
       <div
         class="modal fade"
@@ -153,7 +159,12 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="TituloModalCentralizado">Comunidades</h5>
+              <h5
+                class="modal-title texto-negrito"
+                id="TituloModalCentralizado"
+              >
+                Comunidades
+              </h5>
               <button
                 type="button"
                 class="close"
@@ -219,7 +230,7 @@
           </div>
         </div>
       </div>
-      
+
       <!-- Modal Mini-mentoria-->
       <div
         class="modal fade"
@@ -232,8 +243,11 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="TituloModalCentralizado">
-                Faça uma pergunta
+              <h5
+                class="modal-title texto-negrito"
+                id="TituloModalCentralizado"
+              >
+                Marque uma mini-mentoria
               </h5>
               <button
                 type="button"
@@ -246,6 +260,12 @@
             </div>
             <div class="modal-body">
               <div class="form-group d-flex flex-column justify-content-center">
+                <img
+                  class="img-fluid"
+                  src="https://i.imgur.com/UWvPZAf.png"
+                  style="width: 90%"
+                  alt=""
+                />
                 <label for="titulo">Escreva aqui:</label>
                 <textarea
                   name="descricao"
@@ -268,13 +288,13 @@
                 class="btn btn-verdepetroleo text-white"
                 data-dismiss="modal"
               >
-                Publicar
+                Marcar
               </button>
             </div>
           </div>
         </div>
       </div>
-      
+
       <!-- Modal Materiais compartilhados-->
       <div
         class="modal fade"
@@ -287,7 +307,10 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="TituloModalCentralizado">
+              <h5
+                class="modal-title texto-negrito"
+                id="TituloModalCentralizado"
+              >
                 Compartilhe materiais importantes!
               </h5>
               <button
@@ -303,7 +326,7 @@
               <div class="form-group d-flex flex-column justify-content-center">
                 <label for="nome">Nome</label>
                 <input type="text" placeholder="Insira o nome do material" />
-      
+
                 <label for="titulo">Descrição</label>
                 <textarea
                   name="descricao"
@@ -334,7 +357,7 @@
           </div>
         </div>
       </div>
-      
+
       <!-- Modal Eventos-->
       <div
         class="modal fade"
@@ -347,8 +370,11 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="TituloModalCentralizado">
-                Faça uma pergunta
+              <h5
+                class="modal-title texto-negrito"
+                id="TituloModalCentralizado"
+              >
+                Marque ou participe de um evento
               </h5>
               <button
                 type="button"
@@ -361,6 +387,12 @@
             </div>
             <div class="modal-body">
               <div class="form-group d-flex flex-column justify-content-center">
+                <img
+                  class="img-fluid"
+                  src="https://i.imgur.com/UWvPZAf.png"
+                  style="width: 90%"
+                  alt=""
+                />
                 <label for="titulo">Escreva aqui:</label>
                 <textarea
                   name="descricao"
@@ -383,7 +415,7 @@
                 class="btn btn-verdepetroleo text-white"
                 data-dismiss="modal"
               >
-                Publicar
+                Marcar
               </button>
             </div>
           </div>
@@ -472,6 +504,10 @@
               {{ item.descricao }}
             </div>
 
+            <div class="conteudoTexto mb-1 mt-2 ml-5 mr-5 texto-negrito">
+              {{ item.tag }}
+            </div>
+
             <div class="conteudoMidia mb-1">
               <img src="{{ item.link }}" alt="" style="width: 100%" />
             </div>
@@ -508,7 +544,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="TituloModalCentralizado">
+          <h5 class="modal-title texto-negrito" id="TituloModalCentralizado">
             Responda ao Mathetaiano :)
           </h5>
           <button
@@ -532,11 +568,19 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn botao-cancel" data-dismiss="modal">
+          <button
+            type="button"
+            class="btn botao-cancel texto-negrito"
+            data-dismiss="modal"
+          >
             Cancelar
           </button>
-          <button type="button" class="btn botao-cadas" data-dismiss="modal">
-            RESPONDER
+          <button
+            type="button"
+            class="btn botao-cadas texto-negrito"
+            data-dismiss="modal"
+          >
+            Responder
           </button>
         </div>
       </div>
