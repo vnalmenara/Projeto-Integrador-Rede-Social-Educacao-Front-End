@@ -24,3 +24,22 @@
   width: 150px;
   align-items: center;
 }
+
+.imgFlip {
+  -webkit-transform: scaleY(-0.85);
+  -o-transform: scaleY(-0.85);
+  -moz-transform: scaleY(-0.85);
+  transform: scaleY(-0.85);
+  rotate: -20deg;
+}
+
+@media (min-width: 360px) {
+  i {
+    font-size: 20px;
+  }
+}
+@media (min-width: 768px) {
+  i {
+    font-size: 35px;
+  }
+}
