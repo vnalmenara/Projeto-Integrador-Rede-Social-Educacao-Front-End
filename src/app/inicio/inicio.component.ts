@@ -109,23 +109,16 @@ export class InicioComponent implements OnInit {
       });
   }
 
-  curtir() {
-    if (this.curtida == null) {
-      this.curtida = 1;
-      //this.postagem.interacao = this.curtida
+  curtir(id: number) {
+    console.log(this.curtida);
 
-      // this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem) => {
-      //  this.postagem = resp;
-      // })
-    } else {
+    this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem) =>{
+      this.curtida = resp.interacao;
       this.curtida += 1;
-      //this.postagem.interacao = this.curtida
-
-      //this.postagem.descricao = this.descricao
-
-      // this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem) => {
-      //this.postagem = resp;
-      // })
-    }
+      
+      console.log(this.curtida);
+    })
   }
+
 }
+

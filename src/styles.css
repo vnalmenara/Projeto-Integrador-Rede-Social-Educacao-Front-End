@@ -1,5 +1,6 @@
-* {
-  font-family: "Quicksand", sans-serif;
+*{
+  font-family: 'Quicksand', sans-serif;
+  scroll-behavior: smooth;
 }
 
 .texto-negrito {

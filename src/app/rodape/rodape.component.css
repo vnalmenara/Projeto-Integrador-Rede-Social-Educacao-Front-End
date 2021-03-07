@@ -1,3 +1,8 @@
+.back-top{
+  font-size: 35px;
+  animation: back-to-top 1s infinite alternate;
+}
+
 footer {
   background-color: #0f6d62;
 }
@@ -38,4 +43,15 @@ ul.social-network li {
 
 .fa-github-square:hover {
   color: #3bbba0;
+}
+
+/*Animações*/
+@keyframes back-to-top{
+  0%{
+    transform: translateY(20px);
+  }
+
+  100%{
+    transform: translateY(0);
+  }
 }

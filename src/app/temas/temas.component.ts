@@ -20,6 +20,7 @@ export class TemasComponent implements OnInit {
 
   listaPostagens: Postagem[];
   postagem: Postagem = new Postagem();
+  curtida = this.postagem.interacao;
   
   tema: Tema = new Tema();
   idTema: number;
@@ -43,8 +44,8 @@ export class TemasComponent implements OnInit {
       this.router.navigate(['/entrar']);
     }
 
-    this.getAllPostagem();
     this.idTema = this.route.snapshot.params['id'];
+    this.getAllPostagemByTema(this.idTema);
     this.findByIdTema(this.idTema);
 
     /*this.route.params.subscribe(params =>{
@@ -66,9 +67,12 @@ export class TemasComponent implements OnInit {
     });
   }
 
-  /*getAllByTema(id: number){
-    this.postagemService.
-  }*/
+  getAllPostagemByTema(id: number){
+    this.temaService.getByIdTema(id).subscribe((resp: Tema) => {
+      this.tema = resp;
+      this.listaPostagens = this.tema.postagem
+    })
+  }
 
   findByIdTema(id: number) {
     this.temaService.getByIdTema(id).subscribe((resp: Tema) => {
@@ -88,7 +92,15 @@ export class TemasComponent implements OnInit {
         this.postagem = resp;
         alert('Postagem realizada com sucesso!');
         this.postagem = new Postagem();
-        this.getAllPostagem();
+        this.getAllPostagemByTema(this.idTema);
       });
+  }
+
+  curtir() {
+    if (this.curtida == null) {
+      this.curtida = 1;
+    } else {
+      this.curtida += 1;
+    }
   }
 }
