@@ -26,11 +26,7 @@
 }
 
 .imgFlip {
-  -webkit-transform: scaleY(-0.85);
-  -o-transform: scaleY(-0.85);
-  -moz-transform: scaleY(-0.85);
-  transform: scaleY(-0.85);
-  rotate: -20deg;
+  rotate: 60deg;
 }
 
 @media (min-width: 360px) {
