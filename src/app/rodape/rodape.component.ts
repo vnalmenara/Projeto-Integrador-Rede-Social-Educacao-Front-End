@@ -9,7 +9,14 @@ export class RodapeComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+
   }
 
+
+  backToTop(){
+    window.scroll(0,0)
+  }
 }
+
+
