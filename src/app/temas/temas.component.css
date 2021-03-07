@@ -80,3 +80,37 @@ h1 {
 .fa-trash {
   color: #f44235;
 }
+
+.btn-barra {
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  background-color: #f44235;
+}
+
+.botao-cadas {
+  background-color: #0f6d62;
+  color: white;
+}
+
+.botao-cancel {
+  background-color: #f44235;
+  color: white;
+}
+
+.img-post {
+  width: 35px;
+  height: 35px;
+}
+
+.btn-vermelhoclaro {
+  background-color: #f44235;
+}
+
+.btn-verdepetroleo {
+  background-color: #0f6d62;
+}
+
+.btn-verdeclaro {
+  background-color: #3bbba0;
+}
