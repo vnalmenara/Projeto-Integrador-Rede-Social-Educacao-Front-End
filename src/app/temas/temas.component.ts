@@ -19,6 +19,9 @@ export class TemasComponent implements OnInit {
   tema: Tema = new Tema();
   idTema: any;
 
+  key = 'data';
+  reverse = true;
+
   constructor(
     private router: Router,
     private postagemService: PostagemService,
