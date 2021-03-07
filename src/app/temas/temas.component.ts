@@ -5,6 +5,7 @@ import { Postagem } from '../model/Postagem';
 import { PostagemService } from '../service/postagem.service';
 import { Tema } from '../model/Tema';
 import { TemasService } from '../service/temas.service';
+import { User } from '../model/User';
 import { AlertasService } from '../service/alertas.service';
 
 @Component({
@@ -12,12 +13,16 @@ import { AlertasService } from '../service/alertas.service';
   templateUrl: './temas.component.html',
   styleUrls: ['./temas.component.css'],
 })
+
 export class TemasComponent implements OnInit {
-  listaPostagens: Postagem[];
+  user: User = new User();
   idUser = environment.id;
+
+  listaPostagens: Postagem[];
   postagem: Postagem = new Postagem();
+  
   tema: Tema = new Tema();
-  idTema: any;
+  idTema: number;
 
   key = 'data';
   reverse = true;
@@ -61,9 +66,29 @@ export class TemasComponent implements OnInit {
     });
   }
 
+  /*getAllByTema(id: number){
+    this.postagemService.
+  }*/
+
   findByIdTema(id: number) {
     this.temaService.getByIdTema(id).subscribe((resp: Tema) => {
       this.tema = resp;
     });
+  }
+
+  postar() {
+    this.user.id = this.idUser;
+    this.postagem.usuario = this.user;
+    this.tema.id = Number(this.idTema);
+    this.postagem.tema = this.tema;  
+
+    this.postagemService
+      .postPostagem(this.postagem)
+      .subscribe((resp: Postagem) => {
+        this.postagem = resp;
+        alert('Postagem realizada com sucesso!');
+        this.postagem = new Postagem();
+        this.getAllPostagem();
+      });
   }
 }

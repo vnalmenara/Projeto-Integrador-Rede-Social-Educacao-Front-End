@@ -28,6 +28,12 @@ export class PostagemService {
     );
   }
 
+  getAllByIdTema(id: number): Observable<Postagem[]>{
+    return this.http.get<Postagem[]>(
+      `http://localhost:8080/postagem/tema/${id}`, this.token
+    )
+  }
+
   postPostagem(postagem: Postagem): Observable<Postagem> {
     return this.http.post<Postagem>(
       'http://localhost:8080/postagem',
