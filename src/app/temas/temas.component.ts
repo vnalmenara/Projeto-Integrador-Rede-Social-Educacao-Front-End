@@ -6,6 +6,7 @@ import { PostagemService } from '../service/postagem.service';
 import { Tema } from '../model/Tema';
 import { TemasService } from '../service/temas.service';
 import { User } from '../model/User';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-temas',
@@ -23,18 +24,22 @@ export class TemasComponent implements OnInit {
   tema: Tema = new Tema();
   idTema: number;
 
+  key = 'data';
+  reverse = true;
+
   constructor(
     private router: Router,
     private postagemService: PostagemService,
     private route: ActivatedRoute,
-    private temaService: TemasService
+    private temaService: TemasService,
+    private alertas: AlertasService,
   ) {}
 
   ngOnInit() {
     window.scroll(0, 0);
 
     if (environment.token == '') {
-      alert('Sua sessão expirou, faça o login novamente.');
+      this.alertas.showAlertInfo('Sua sessão expirou, faça o login novamente.');
       this.router.navigate(['/entrar']);
     }
 
