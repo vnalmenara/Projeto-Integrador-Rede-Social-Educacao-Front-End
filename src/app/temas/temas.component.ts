@@ -13,16 +13,14 @@ import { AlertasService } from '../service/alertas.service';
   templateUrl: './temas.component.html',
   styleUrls: ['./temas.component.css'],
 })
-
 export class TemasComponent implements OnInit {
   user: User = new User();
-  idUser = environment.id;
+  tema: Tema = new Tema();
+  postagem: Postagem = new Postagem();
 
   listaPostagens: Postagem[];
-  postagem: Postagem = new Postagem();
+  idUser = environment.id;
   curtida = this.postagem.interacao;
-  
-  tema: Tema = new Tema();
   idTema: number;
 
   key = 'data';
@@ -33,32 +31,20 @@ export class TemasComponent implements OnInit {
     private postagemService: PostagemService,
     private route: ActivatedRoute,
     private temaService: TemasService,
-    private alertas: AlertasService,
-  ) {}
+    private alertas: AlertasService
+  ) {
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+  }
 
   ngOnInit() {
     window.scroll(0, 0);
-
     if (environment.token == '') {
       this.alertas.showAlertInfo('Sua sessão expirou, faça o login novamente.');
       this.router.navigate(['/entrar']);
     }
-
     this.idTema = this.route.snapshot.params['id'];
     this.getAllPostagemByTema(this.idTema);
     this.findByIdTema(this.idTema);
-
-    /*this.route.params.subscribe(params =>{
-        return this.idTema = params;
-      })
-      this.findByIdTema(this.idTema);*/
-
-    /*this.router.events.subscribe(event =>{
-        if (event instanceof NavigationEnd){
-          this.idTema = event;
-          this.findByIdTema(this.idTema);
-        }
-      })*/
   }
 
   getAllPostagem() {
@@ -67,11 +53,11 @@ export class TemasComponent implements OnInit {
     });
   }
 
-  getAllPostagemByTema(id: number){
+  getAllPostagemByTema(id: number) {
     this.temaService.getByIdTema(id).subscribe((resp: Tema) => {
       this.tema = resp;
-      this.listaPostagens = this.tema.postagem
-    })
+      this.listaPostagens = this.tema.postagem;
+    });
   }
 
   findByIdTema(id: number) {
@@ -84,7 +70,7 @@ export class TemasComponent implements OnInit {
     this.user.id = this.idUser;
     this.postagem.usuario = this.user;
     this.tema.id = Number(this.idTema);
-    this.postagem.tema = this.tema;  
+    this.postagem.tema = this.tema;
 
     this.postagemService
       .postPostagem(this.postagem)
