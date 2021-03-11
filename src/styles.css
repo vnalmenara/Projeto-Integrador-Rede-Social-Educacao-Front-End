@@ -21,3 +21,11 @@
 .fs20 {
   font-size: 20px;
 }
+
+.fixo {
+  z-index: 199;
+  position: fixed;
+  top: 70px;
+  width: 23%;
+}
+

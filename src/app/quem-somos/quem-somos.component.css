@@ -1,3 +1,32 @@
+#back-to-entrar{
+  font-size: 35px;
+  color: #3bbba0;
+  animation: back 1s infinite alternate;
+}
+
+.link-voltar{
+  color: #3bbba0;
+  font-weight: bold;
+  animation: back 1s infinite alternate;
+}
+
+#back-to-entrar:hover{
+  color:#0f6d62;
+}
+
+.link-voltar:hover{
+  color:#0f6d62;
+}
+
+em{
+  font-weight: bold;
+  color: #3bbba0;
+}
+
+p{
+  font-size: 1.1rem;
+}
+
 .imgQuemSomos {
   width: 300px;
   height: 300px;
@@ -36,5 +65,16 @@ ul.social-network li {
   .imgD {
     display: flex;
     flex-direction: row;
+  }
+}
+
+/*Animações*/
+@keyframes back{
+  0%{
+    transform: translateX(20px);
+  }
+
+  100%{
+    transform: translateX(0);
   }
 }

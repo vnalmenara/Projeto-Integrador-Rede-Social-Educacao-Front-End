@@ -29,6 +29,10 @@ h1 {
   background-size: cover;
 }
 
+a{
+  cursor: pointer;
+}
+
 .fas {
   font-size: 1rem;
 }

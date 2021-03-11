@@ -8,8 +8,8 @@
   </div>
   <div class="row">
     <div class="col-md-3">
-      <!--Trazendo menu lateral e rezando p dar certo!-->
-      <div class="d-flex flex-column justify-content-start">
+      <!-- Sidebar -->
+      <div class="d-flex flex-column justify-content-start sidebar">
         <button
           type="button"
           class="btn btn-barra mb-2 p-2"
@@ -55,373 +55,6 @@
         </button>
       </div>
 
-      <!-- Modal Pergunta-->
-      <div
-        class="modal fade"
-        id="pergunta"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="TituloModalCentralizado"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title texto-negrito" id="novaPostagem">
-                <img
-                  class="img-post img-fluid"
-                  src="../../assets/img/padrao-perfil.jpg"
-                  alt=""
-                />
-                Nova Postagem
-              </h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Fechar"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-
-            <div class="modal-body">
-              <div class="form-group">
-                <label for="titulo">Criar Publicação</label>
-                <textarea
-                  class="form-control"
-                  name="texto"
-                  id="texto"
-                  rows="3"
-                  placeholder="No que você esta pensando hoje?"
-                  [(ngModel)]="postagem.descricao"
-                ></textarea>
-              </div>
-
-              <div class="form-group">
-                <label for="imagem">Imagem</label>
-                <textarea
-                  class="form-control"
-                  name="imagem"
-                  id="imagem"
-                  rows="1"
-                  placeholder="Adicione URL de imagem"
-                  [(ngModel)]="postagem.link"
-                ></textarea>
-
-                <div class="form-group">
-                  <label for="titulo">Tags</label>
-                  <textarea
-                    class="form-control"
-                    name="texto"
-                    id="texto"
-                    rows="1"
-                    placeholder="Adicione Tags"
-                    [(ngModel)]="postagem.tag"
-                  ></textarea>
-                </div>
-
-                <div class="form-group">
-                  <label for="text">Marcar pessoas</label>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn botao-cancel"
-                data-dismiss="modal"
-              >
-                Cancelar
-              </button>
-              <button
-                type="button"
-                class="btn botao-cadas"
-                (click)="postar()"
-                data-dismiss="modal"
-              >
-                Publicar
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modal Comunidades-->
-      <div
-        class="modal fade"
-        id="comunidades"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="TituloModalCentralizado"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5
-                class="modal-title texto-negrito"
-                id="TituloModalCentralizado"
-              >
-                Comunidades
-              </h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Fechar"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-                <div class="col-md-12 d-flex align-items-center">
-                  <table class="table table-hover">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Nome</th>
-                        <th scope="col" class="text-right">Descrição</th>
-                        <th></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th>1</th>
-                        <th>Comunidade 1</th>
-                        <td>
-                          Bora entrar para fazer um teste e ver se á funcionando
-                          certo!
-                        </td>
-                        <td class="d-flex justify-content-end">
-                          <button
-                            class="btn btn-verdepetroleo text-white d-flex align-self-center"
-                          >
-                            Participar
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>2</th>
-                        <th>Comunidade 2</th>
-                        <td>
-                          Que tal entra nessaa qui então, vem com a gente tentar
-                          entender esse negócio muito loco! :p
-                        </td>
-                        <td class="d-flex justify-content-end">
-                          <button class="btn btn-verdepetroleo text-white">
-                            Participar
-                          </button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12 d-flex justify-content-center">
-                  <button class="btn btn-verdepetroleo text-white">
-                    Criar uma comunidade nova!
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modal Mini-mentoria-->
-      <div
-        class="modal fade"
-        id="mini-mentoria"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="TituloModalCentralizado"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5
-                class="modal-title texto-negrito"
-                id="TituloModalCentralizado"
-              >
-                Marque uma mini-mentoria
-              </h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Fechar"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="form-group d-flex flex-column justify-content-center">
-                <img
-                  class="img-fluid"
-                  src="https://i.imgur.com/UWvPZAf.png"
-                  style="width: 90%"
-                  alt=""
-                />
-                <label for="titulo">Escreva aqui:</label>
-                <textarea
-                  name="descricao"
-                  id="descricao"
-                  cols="60"
-                  placeholder="Escreva sua pergunta aqui..."
-                ></textarea>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-vermelhoclaro text-white"
-                data-dismiss="modal"
-              >
-                Cancelar
-              </button>
-              <button
-                type="button"
-                class="btn btn-verdepetroleo text-white"
-                data-dismiss="modal"
-              >
-                Marcar
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modal Materiais compartilhados-->
-      <div
-        class="modal fade"
-        id="materiais"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="TituloModalCentralizado"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5
-                class="modal-title texto-negrito"
-                id="TituloModalCentralizado"
-              >
-                Compartilhe materiais importantes!
-              </h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Fechar"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="form-group d-flex flex-column justify-content-center">
-                <label for="nome">Nome</label>
-                <input type="text" placeholder="Insira o nome do material" />
-
-                <label for="titulo">Descrição</label>
-                <textarea
-                  name="descricao"
-                  id="descricao"
-                  cols="60"
-                  placeholder="Descreva brevemente o material :)"
-                ></textarea>
-                <label for="link">Adicione o link</label>
-                <input type="text" placeholder="Adione o link do material" />
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-vermelhoclaro text-white"
-                data-dismiss="modal"
-              >
-                Cancelar
-              </button>
-              <button
-                type="button"
-                class="btn btn-verdepetroleo text-white"
-                data-dismiss="modal"
-              >
-                Enviar
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modal Eventos-->
-      <div
-        class="modal fade"
-        id="eventos"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="TituloModalCentralizado"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5
-                class="modal-title texto-negrito"
-                id="TituloModalCentralizado"
-              >
-                Marque ou participe de um evento
-              </h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Fechar"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="form-group d-flex flex-column justify-content-center">
-                <img
-                  class="img-fluid"
-                  src="https://i.imgur.com/UWvPZAf.png"
-                  style="width: 90%"
-                  alt=""
-                />
-                <label for="titulo">Escreva aqui:</label>
-                <textarea
-                  name="descricao"
-                  id="descricao"
-                  cols="60"
-                  placeholder="Escreva sua pergunta aqui..."
-                ></textarea>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-vermelhoclaro text-white"
-                data-dismiss="modal"
-              >
-                Cancelar
-              </button>
-              <button
-                type="button"
-                class="btn btn-verdepetroleo text-white"
-                data-dismiss="modal"
-              >
-                Marcar
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--<app-menu-lateral></app-menu-lateral>-->
     </div>
 
     <div class="col-md-9">
@@ -531,8 +164,378 @@
       </div>
     </div>
   </div>
+  
 
-  <!-- Modal -->
+  <!-- Modais -->
+
+  <!-- Modal Pergunta sidebar-->
+  <div
+  class="modal fade"
+  id="pergunta"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="TituloModalCentralizado"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title texto-negrito" id="novaPostagem">
+          <img
+            class="img-post img-fluid"
+            src="../../assets/img/padrao-perfil.jpg"
+            alt=""
+          />
+          Nova Postagem
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Fechar"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="titulo">Criar Publicação</label>
+          <textarea
+            class="form-control"
+            name="texto"
+            id="texto"
+            rows="3"
+            placeholder="No que você esta pensando hoje?"
+            [(ngModel)]="postagem.descricao"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="imagem">Imagem</label>
+          <textarea
+            class="form-control"
+            name="imagem"
+            id="imagem"
+            rows="1"
+            placeholder="Adicione URL de imagem"
+            [(ngModel)]="postagem.link"
+          ></textarea>
+
+          <div class="form-group">
+            <label for="titulo">Tags</label>
+            <textarea
+              class="form-control"
+              name="texto"
+              id="texto"
+              rows="1"
+              placeholder="Adicione Tags"
+              [(ngModel)]="postagem.tag"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="text">Marcar pessoas</label>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn botao-cancel"
+          data-dismiss="modal"
+        >
+          Cancelar
+        </button>
+        <button
+          type="button"
+          class="btn botao-cadas"
+          (click)="postar()"
+          data-dismiss="modal"
+        >
+          Publicar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Comunidades sidebar-->
+<div
+  class="modal fade"
+  id="comunidades"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="TituloModalCentralizado"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5
+          class="modal-title texto-negrito"
+          id="TituloModalCentralizado"
+        >
+          Comunidades
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Fechar"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-12 d-flex align-items-center">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nome</th>
+                  <th scope="col" class="text-right">Descrição</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>1</th>
+                  <th>Comunidade 1</th>
+                  <td>
+                    Bora entrar para fazer um teste e ver se á funcionando
+                    certo!
+                  </td>
+                  <td class="d-flex justify-content-end">
+                    <button
+                      class="btn btn-verdepetroleo text-white d-flex align-self-center"
+                    >
+                      Participar
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <th>Comunidade 2</th>
+                  <td>
+                    Que tal entra nessaa qui então, vem com a gente tentar
+                    entender esse negócio muito loco! :p
+                  </td>
+                  <td class="d-flex justify-content-end">
+                    <button class="btn btn-verdepetroleo text-white">
+                      Participar
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 d-flex justify-content-center">
+            <button class="btn btn-verdepetroleo text-white">
+              Criar uma comunidade nova!
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Mini-mentoria sidebar -->
+<div
+  class="modal fade"
+  id="mini-mentoria"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="TituloModalCentralizado"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5
+          class="modal-title texto-negrito"
+          id="TituloModalCentralizado"
+        >
+          Marque uma mini-mentoria
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Fechar"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group d-flex flex-column justify-content-center">
+          <img
+            class="img-fluid"
+            src="https://i.imgur.com/UWvPZAf.png"
+            style="width: 90%"
+            alt=""
+          />
+          <label for="titulo">Escreva aqui:</label>
+          <textarea
+            name="descricao"
+            id="descricao"
+            cols="60"
+            placeholder="Escreva sua pergunta aqui..."
+          ></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-vermelhoclaro text-white"
+          data-dismiss="modal"
+        >
+          Cancelar
+        </button>
+        <button
+          type="button"
+          class="btn btn-verdepetroleo text-white"
+          data-dismiss="modal"
+        >
+          Marcar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Materiais compartilhados sidebar-->
+<div
+  class="modal fade"
+  id="materiais"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="TituloModalCentralizado"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5
+          class="modal-title texto-negrito"
+          id="TituloModalCentralizado"
+        >
+          Compartilhe materiais importantes!
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Fechar"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group d-flex flex-column justify-content-center">
+          <label for="nome">Nome</label>
+          <input type="text" placeholder="Insira o nome do material" />
+
+          <label for="titulo">Descrição</label>
+          <textarea
+            name="descricao"
+            id="descricao"
+            cols="60"
+            placeholder="Descreva brevemente o material :)"
+          ></textarea>
+          <label for="link">Adicione o link</label>
+          <input type="text" placeholder="Adione o link do material" />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-vermelhoclaro text-white"
+          data-dismiss="modal"
+        >
+          Cancelar
+        </button>
+        <button
+          type="button"
+          class="btn btn-verdepetroleo text-white"
+          data-dismiss="modal"
+        >
+          Enviar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Eventos sidebar -->
+<div
+  class="modal fade"
+  id="eventos"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="TituloModalCentralizado"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5
+          class="modal-title texto-negrito"
+          id="TituloModalCentralizado"
+        >
+          Marque ou participe de um evento
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Fechar"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group d-flex flex-column justify-content-center">
+          <img
+            class="img-fluid"
+            src="https://i.imgur.com/UWvPZAf.png"
+            style="width: 90%"
+            alt=""
+          />
+          <label for="titulo">Escreva aqui:</label>
+          <textarea
+            name="descricao"
+            id="descricao"
+            cols="60"
+            placeholder="Escreva sua pergunta aqui..."
+          ></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-vermelhoclaro text-white"
+          data-dismiss="modal"
+        >
+          Cancelar
+        </button>
+        <button
+          type="button"
+          class="btn btn-verdepetroleo text-white"
+          data-dismiss="modal"
+        >
+          Marcar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!--Modal resposta card -->
   <div
     class="modal fade"
     id="responder"

@@ -1,11 +1,20 @@
+
 .btn-vermelhoclaro{
+    color: white;
+    font-weight: bold;
     background-color:  #F44235;
 }
 
 .btn-verdepetroleo{
+    color: white;
+    font-weight: bold;
     background-color: #0F6D62;
 }
 
 .fonte25 {
     font-size: 25px;
+}
+
+span{
+    color:#B20B0B;
 }

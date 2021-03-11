@@ -3,10 +3,12 @@
 }
 
 .btn-verdepetroleo {
+  font-weight: 600;
   background-color: #0f6d62;
 }
 
 .btn-verdeclaro {
+  font-weight: 600;
   background-color: #3bbba0;
 }
 
@@ -27,6 +29,17 @@
 
 .imgFlip {
   rotate: 60deg;
+}
+
+.miss{
+  color:#f44235;
+  font-style: italic;
+}
+
+#cad{
+  font-weight: bold;
+  color: #3bbba0;
+  text-decoration: underline;
 }
 
 @media (min-width: 360px) {

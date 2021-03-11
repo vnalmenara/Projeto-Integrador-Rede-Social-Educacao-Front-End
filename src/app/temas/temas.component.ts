@@ -31,7 +31,7 @@ export class TemasComponent implements OnInit {
     private postagemService: PostagemService,
     private route: ActivatedRoute,
     private temaService: TemasService,
-    private alertas: AlertasService
+    private alertas: AlertasService,   
   ) {
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
   }
@@ -76,7 +76,7 @@ export class TemasComponent implements OnInit {
       .postPostagem(this.postagem)
       .subscribe((resp: Postagem) => {
         this.postagem = resp;
-        alert('Postagem realizada com sucesso!');
+        this.alertas.showAlertSuccess('Postagem realizada com sucesso!');
         this.postagem = new Postagem();
         this.getAllPostagemByTema(this.idTema);
       });
