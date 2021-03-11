@@ -1,185 +1,190 @@
 <div class="container-fluid mt-5 d-flex justify-content-center">
-  <div class="col-md-3">
-    <div class="card mr-5 mb-3">
-      <div class="card-body">
-        <div
-          class="container-fluid d-flex flex-row align-items-center mb-3 justify-content-around"
-        >
-          <img
-            class="buscaLogo img-fluid"
-            src="../../assets/img/padrao-perfil.jpg"
-            alt=""
-          />
-          <h3 class="texto-negrito">Buscar</h3>
-        </div>
-        <div class="form-group">
-          <label for="buscaDescricao"><strong>Descrição:</strong></label>
-          <input
-            type="text"
-            class="form-control"
-            id="buscaDescricao"
-            placeholder="Buscar..."
-            [(ngModel)]="buscaDescricaoPostagem"
-            (keyup)="findByDescricaoPostagem()"
-          />
-        </div>
-      </div>
-    </div>
-    <div class="card mr-5">
-      <img class="img-fluid" src="https://i.imgur.com/pSm4n8i.jpg" alt="" />
-    </div>
-  </div>
-  <div class="col-md-9">
-    <!-- Início: card post -->
-    <div class="row mb-3">
-      <div class="col-md-10">
-        <div class="postInicio d-flex flex-column">
-          <div class="d-flex align-items-center mt-2 mr-4 mb-3 ml-4">
-            <img
-              class="imgPost mr-3"
-              src="{{ foto }}"
-              alt="Foto perfil"
-              onerror="this.onerror=null; this.src='../../assets/img/padrao-perfil.jpg'"
-            />
-            <textarea
-              class="form-control"
-              name="texto"
-              id="texto"
-              rows="1"
-              data-toggle="modal"
-              data-target="#novaPostagem"
-              placeholder="No que você está pensando hoje?"
-              style="border-radius: 0.8rem"
-              [(ngModel)]="postagem.descricao"
-            ></textarea>
-          </div>
-
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card mr-5 mb-3">
+        <div class="card-body">
           <div
-            class="postOpcoes d-flex flex-wrap justify-content-around align-items-center"
+            class="container-fluid d-flex flex-row align-items-center mb-3 justify-content-around"
           >
-            <button
-              class="btn texto-negrito"
-              data-toggle="modal"
-              data-target="#novaPostagem"
-            >
-              <i class="fas fa-photo-video"></i> Imagem
-            </button>
-
-            <button class="btn" data-toggle="modal" data-target="#novaPostagem">
-              <i class="fas fa-user-tag"></i> Marcar pessoas
-            </button>
-
-            <button class="btn" data-toggle="modal" data-target="#novaPostagem">
-              <i class="fas fa-tag" aria-hidden="true"></i> Adicionar Tags
-            </button>
-
-            <button class="btn" data-toggle="modal" data-target="#novaPostagem">
-              <i class="fas fa-laugh"></i> Sentimento
-            </button>
+            <img
+              class="buscaLogo img-fluid"
+              src="../../assets/img/padrao-perfil.jpg"
+              alt=""
+            />
+            <h3 class="texto-negrito">Buscar</h3>
+          </div>
+          <div class="form-group">
+            <label for="buscaDescricao"><strong>Descrição:</strong></label>
+            <input
+              type="text"
+              class="form-control"
+              id="buscaDescricao"
+              placeholder="Buscar..."
+              [(ngModel)]="buscaDescricaoPostagem"
+              (keyup)="findByDescricaoPostagem()"
+            />
           </div>
         </div>
       </div>
+      <div class="card mr-5 teste">
+        <img class="img-fluid" src="https://i.imgur.com/pSm4n8i.jpg" alt="" />
+      </div>
     </div>
-    <!-- Fim: card post -->
-
-    <!-- Inicio: postagens outros -->
-    <div
-      class="row mb-3"
-      *ngFor="let item of listaPostagens | orderBy: key:reverse"
-    >
-      <div class="col-md-10">
-        <div class="postInicio d-flex flex-column">
-          <!--Navbar-->
-          <nav class="navbar navbar-6">
-            <div class="d-flex align-items-center mt-1 mr-4 ml-4 mb-0">
+    <div class="col-md-9">
+      <!-- Início: card post -->
+      <div class="row mb-3">
+        <div class="col-md-10">
+          <div class="postInicio d-flex flex-column">
+            <div class="d-flex align-items-center mt-2 mr-4 mb-3 ml-4">
               <img
                 class="imgPost mr-3"
-                src="{{ item.usuario.foto }}"
-                alt="Foto de perfil"
+                src="{{ foto }}"
+                alt="Foto perfil"
                 onerror="this.onerror=null; this.src='../../assets/img/padrao-perfil.jpg'"
               />
-
-              <div>
-                <p style="font-size: 17px; line-height: 0% mt-1">
-                  <strong>{{ item.usuario.nome_completo }}</strong>
-                </p>
-                <p style="font-size: 11px; line-height: 0%">
-                  {{ item.data | date: "dd/MM/yyyy" }} às
-                  {{ item.data | date: "HH:mm" }}
-                </p>
-              </div>
+              <textarea
+                class="form-control"
+                name="texto"
+                id="texto"
+                rows="1"
+                data-toggle="modal"
+                data-target="#novaPostagem"
+                placeholder="No que você está pensando hoje?"
+                style="border-radius: 0.8rem"
+                [(ngModel)]="postagem.descricao"
+              ></textarea>
             </div>
-
-            <!-- Collapse button -->
-            <button
-              *ngIf="item.usuario.id == idUser"
-              class="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarSupportedContent15"
-              aria-controls="navbarSupportedContent15"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
+            <div
+              class="postOpcoes d-flex flex-wrap justify-content-around align-items-center"
             >
-              <span class="navbar-toggler-icon dots">
-                <i class="fas fa-th"></i>
-              </span>
-            </button>
-
-            <!-- Collapsible content -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent15">
-              <!-- Links -->
-              <ul class="navbar-nav mr-4">
-                <li class="nav-item active text-right">
-                  <a
-                    [routerLink]="['/postagem-edit', item.id]"
-                    class="nav-link"
-                    href="#"
-                    ><i class="fas fa-pencil-alt"></i
-                    ><span class="sr-only">(current)</span></a
-                  >
-                </li>
-                <li class="nav-item active text-right">
-                  <a
-                    [routerLink]="['/postagem-delete', item.id]"
-                    class="nav-link"
-                    href="#"
-                    ><i class="fas fa-trash"></i
-                  ></a>
-                </li>
-              </ul>
-              <!-- Links -->
+              <button
+                class="btn texto-negrito"
+                data-toggle="modal"
+                data-target="#novaPostagem"
+              >
+                <i class="fas fa-photo-video"></i> Imagem
+              </button>
+              <button
+                class="btn"
+                data-toggle="modal"
+                data-target="#novaPostagem"
+              >
+                <i class="fas fa-user-tag"></i> Marcar pessoas
+              </button>
+              <button
+                class="btn"
+                data-toggle="modal"
+                data-target="#novaPostagem"
+              >
+                <i class="fas fa-tag" aria-hidden="true"></i> Adicionar Tags
+              </button>
+              <button
+                class="btn"
+                data-toggle="modal"
+                data-target="#novaPostagem"
+              >
+                <i class="fas fa-laugh"></i> Sentimento
+              </button>
             </div>
-            <!-- Collapsible content -->
-          </nav>
-          <!--/.Navbar-->
-
-          <div class="conteudoTexto mb-1 mt-2 ml-5 mr-5 d-flex text-justify">
-            {{ item.descricao }}
-          </div>
-
-          <div class="conteudoTexto mb-1 mt-2 ml-5 mr-5 texto-negrito">
-            {{ item.tag }}
-          </div>
-          <div class="conteudoMidia mb-1">
-            <img src="{{ item.link }}" alt="" style="width: 100%" />
-          </div>
-
-          <div
-            class="postOpcoes d-flex flex-wrap justify-content-around align-items-center"
-          >
-            <a (click)="curtir(item.id)"
-              ><i class="fas fa-thumbs-up"></i> Curtir
-              <span>{{ curtida }}</span></a
-            >
-            <a href=""><i class="fas fa-comment"></i> Comentar</a>
-            <a href=""><i class="fas fa-share-alt"></i> Compartilhar</a>
           </div>
         </div>
       </div>
+      <!-- Fim: card post -->
+      <!-- Inicio: postagens outros -->
+      <div
+        class="row mb-3"
+        *ngFor="let item of listaPostagens | orderBy: key:reverse"
+      >
+        <div class="col-md-10">
+          <div class="postInicio d-flex flex-column">
+            <!--Navbar-->
+            <nav class="navbar navbar-6">
+              <div class="d-flex align-items-center mt-1 mr-4 ml-4 mb-0">
+                <img
+                  class="imgPost mr-3"
+                  src="{{ item.usuario.foto }}"
+                  alt="Foto de perfil"
+                  onerror="this.onerror=null; this.src='../../assets/img/padrao-perfil.jpg'"
+                />
+                <div>
+                  <p style="font-size: 17px; line-height: 0% mt-1">
+                    <strong>{{ item.usuario.nome_completo }}</strong>
+                  </p>
+                  <p style="font-size: 11px; line-height: 0%">
+                    {{ item.data | date: "dd/MM/yyyy" }} às
+                    {{ item.data | date: "HH:mm" }}
+                  </p>
+                </div>
+              </div>
+              <!-- Collapse button -->
+              <button
+                *ngIf="item.usuario.id == idUser"
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent15"
+                aria-controls="navbarSupportedContent15"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon dots">
+                  <i class="fas fa-th"></i>
+                </span>
+              </button>
+              <!-- Collapsible content -->
+              <div
+                class="collapse navbar-collapse"
+                id="navbarSupportedContent15"
+              >
+                <!-- Links -->
+                <ul class="navbar-nav mr-4">
+                  <li class="nav-item active text-right">
+                    <a
+                      [routerLink]="['/postagem-edit', item.id]"
+                      class="nav-link"
+                      href="#"
+                      ><i class="fas fa-pencil-alt"></i
+                      ><span class="sr-only">(current)</span></a
+                    >
+                  </li>
+                  <li class="nav-item active text-right">
+                    <a
+                      [routerLink]="['/postagem-delete', item.id]"
+                      class="nav-link"
+                      href="#"
+                      ><i class="fas fa-trash"></i
+                    ></a>
+                  </li>
+                </ul>
+                <!-- Links -->
+              </div>
+              <!-- Collapsible content -->
+            </nav>
+            <!--/.Navbar-->
+            <div class="conteudoTexto mb-1 mt-2 ml-5 mr-5 d-flex text-justify">
+              {{ item.descricao }}
+            </div>
+            <div class="conteudoTexto mb-1 mt-2 ml-5 mr-5 texto-negrito">
+              {{ item.tag }}
+            </div>
+            <div class="conteudoMidia mb-1">
+              <img src="{{ item.link }}" alt="" style="width: 100%" />
+            </div>
+            <div
+              class="postOpcoes d-flex flex-wrap justify-content-around align-items-center"
+            >
+              <a (click)="curtir(item.id)"
+                ><i class="fas fa-thumbs-up"></i> Curtir
+                <span>{{ curtida }}</span></a
+              >
+              <a href=""><i class="fas fa-comment"></i> Comentar</a>
+              <a href=""><i class="fas fa-share-alt"></i> Compartilhar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fim: postagens outros -->
     </div>
-
-    <!-- Fim: postagens outros -->
   </div>
 </div>
 
