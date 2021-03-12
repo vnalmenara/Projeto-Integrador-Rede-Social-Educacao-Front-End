@@ -18,7 +18,7 @@ export class InicioComponent implements OnInit {
   tema: Tema = new Tema();
   postagem: Postagem = new Postagem();
 
-  curtida: number = this.postagem.interacao;
+  //curtida: number = this.postagem.interacao;
   descricao = this.postagem.descricao;
 
   listaPostagens: Postagem[];
@@ -110,16 +110,9 @@ export class InicioComponent implements OnInit {
   }
 
   curtir(id: number) {
-    console.log("Teste começa aqui!");
-    
-    console.log(id);
-
-    this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem) =>{
-      this.curtida = resp.interacao;
-      this.curtida += 1;
-      
-      console.log(id);
-    })
+    this.postagemService.putInteracao(id).subscribe(()=> {
+      this.getAllPostagem();
+    });
   }
 
 }

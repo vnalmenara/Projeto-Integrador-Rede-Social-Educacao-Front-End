@@ -22,7 +22,6 @@ export class MenuComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log(environment.id)
   }
 
   sair(){

@@ -28,26 +28,6 @@ export class PostagemService {
     );
   }
 
-  
-  postPostagem(postagem: Postagem): Observable<Postagem> {
-    return this.http.post<Postagem>(
-      'http://localhost:8080/postagem',
-      postagem,
-      this.token
-      );
-    }
-    putPostagem(postagem: Postagem): Observable<Postagem> {
-      return this.http.put<Postagem>(
-        'http://localhost:8080/postagem',
-        postagem,
-        this.token
-        );
-      }
-
-  deletePostagem(id: number) {
-    return this.http.delete(`http://localhost:8080/postagem/${id}`, this.token);
-  }
-
   getByTagPostagem(tag: string): Observable<Postagem[]> {
     return this.http.get<Postagem[]>(
       `http://localhost:8080/postagem/tag/${tag}`,
@@ -60,6 +40,30 @@ export class PostagemService {
       `http://localhost:8080/postagem/descricao/${descricao}`,
       this.token
     );
+  }
+
+  postPostagem(postagem: Postagem): Observable<Postagem> {
+    return this.http.post<Postagem>(
+      'http://localhost:8080/postagem',
+      postagem,
+      this.token
+      );
+    }
+    
+  putPostagem(postagem: Postagem): Observable<Postagem> {
+    return this.http.put<Postagem>(
+      'http://localhost:8080/postagem',
+      postagem,
+      this.token
+    );
+  }
+
+  putInteracao(idPostagem: number){
+    return this.http.put(`http://localhost:8080/postagem/${idPostagem}`, this.token)
+  }
+
+  deletePostagem(id: number) {
+    return this.http.delete(`http://localhost:8080/postagem/${id}`, this.token);
   }
 
 }

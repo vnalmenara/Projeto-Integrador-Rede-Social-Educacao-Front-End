@@ -175,7 +175,7 @@
             >
               <a (click)="curtir(this.item.id)"
                 ><i class="fas fa-thumbs-up"></i> Curtir
-                <span>{{ curtida }}</span></a
+                <span *ngIf='item.interacao != 0'>{{ item.interacao }}</span></a
               >
               <a><i class="fas fa-comment"></i> Comentar</a>
               <a><i class="fas fa-share-alt"></i> Compartilhar</a>
