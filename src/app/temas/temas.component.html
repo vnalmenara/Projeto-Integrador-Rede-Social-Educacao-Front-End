@@ -148,7 +148,7 @@
             <div
               class="postOpcoes d-flex flex-wrap justify-content-around align-items-center"
             >
-              <a (click)="curtir()"><i class="fas fa-thumbs-up"></i> Curtir <span>{{ curtida }}</span></a>
+              <a (click)="curtir(item.id)"><i class="fas fa-thumbs-up"></i> Curtir <span *ngIf='item.interacao != 0'>{{ item.interacao }}</span></a>
               <a><i class="fas fa-share-alt"></i> Compartilhar </a>
               <button
                 class="btn botao-cadas"
@@ -276,6 +276,11 @@
           class="modal-title texto-negrito"
           id="TituloModalCentralizado"
         >
+        <img
+            class="img-post img-fluid"
+            src="../../assets/img/padrao-perfil.jpg"
+            alt="Logo Mathetai"
+          />
           Comunidades
         </h5>
         <button
@@ -292,38 +297,33 @@
           <div class="col-md-12 d-flex align-items-center">
             <table class="table table-hover">
               <thead>
-                <tr>
-                  <th scope="col">#</th>
+                <tr class="text-center">
                   <th scope="col">Nome</th>
-                  <th scope="col" class="text-right">Descrição</th>
+                  <th scope="col">Descrição</th>
                   <th></th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th>1</th>
-                  <th>Comunidade 1</th>
+                <tr class="text-justify">
+                  <th class="text-center">Java Lovers</th>
                   <td>
-                    Bora entrar para fazer um teste e ver se á funcionando
-                    certo!
+                    Comunidade para aqueles que amam Java! Vem com a gente aprender mais dessa linguagem :)
                   </td>
                   <td class="d-flex justify-content-end">
                     <button
-                      class="btn btn-verdepetroleo text-white d-flex align-self-center"
+                      class="btn btn-verdeclaro text-white d-flex align-self-center"
                     >
                       Participar
                     </button>
                   </td>
                 </tr>
                 <tr>
-                  <th>2</th>
-                  <th>Comunidade 2</th>
+                  <th class="text-center">Físicos turistas</th>
                   <td>
-                    Que tal entra nessaa qui então, vem com a gente tentar
-                    entender esse negócio muito loco! :p
+                    Adora física? Vem "viajar" com a gente nessa matéria e descubra um mundo completamente novo!
                   </td>
                   <td class="d-flex justify-content-end">
-                    <button class="btn btn-verdepetroleo text-white">
+                    <button class="btn btn-verdeclaro text-white">
                       Participar
                     </button>
                   </td>
@@ -335,7 +335,7 @@
         <div class="row">
           <div class="col-md-12 d-flex justify-content-center">
             <button class="btn btn-verdepetroleo text-white">
-              Criar uma comunidade nova!
+              Criar uma nova comunidade
             </button>
           </div>
         </div>
@@ -360,6 +360,11 @@
           class="modal-title texto-negrito"
           id="TituloModalCentralizado"
         >
+        <img
+            class="img-post img-fluid"
+            src="../../assets/img/padrao-perfil.jpg"
+            alt="Logo Mathetai"
+          />
           Marque uma mini-mentoria
         </h5>
         <button
@@ -373,18 +378,68 @@
       </div>
       <div class="modal-body">
         <div class="form-group d-flex flex-column justify-content-center">
-          <img
-            class="img-fluid"
-            src="https://i.imgur.com/UWvPZAf.png"
-            style="width: 90%"
-            alt=""
-          />
-          <label for="titulo">Escreva aqui:</label>
+         
+        <!--Calendario-->
+         <div class="month">
+          <ul>
+            <li class="prev">&#10094;</li>
+            <li class="next">&#10095;</li>
+            <li><strong>Março - <span style="font-size:18px">2021</span></strong></li>
+          </ul>
+        </div>
+        
+        <ul class="weekdays">
+          <li style='color: #f44235'>Dom</li>
+          <li>Seg</li>
+          <li>Ter</li>
+          <li>Qua</li>
+          <li>Qui</li>
+          <li>Sex</li>
+          <li>Sab</li>
+        </ul>
+        
+        <ul class="days mb-2">
+          <li></li>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li style='color: #f44235'>7</li>
+          <li>8</li>
+          <li>9</li>
+          <li>10</li>
+          <li>11</li>
+          <li>12</li>
+          <li>13</li>
+          <li style='color: #f44235'>14</li>
+          <li>15</li>
+          <li>16</li>
+          <li>17</li>
+          <li><span class="active">18</span></li>
+          <li>19</li>
+          <li>20</li>
+          <li style='color: #f44235'>21</li>
+          <li>22</li>
+          <li>23</li>
+          <li>24</li>
+          <li>25</li>
+          <li>26</li>
+          <li>27</li>
+          <li style='color: #f44235'>28</li>
+          <li>29</li>
+          <li>30</li>
+          <li>31</li>
+          
+        </ul>
+         <!--/Calendario-->
+          <label for="titulo">Marque aqui:</label>
           <textarea
             name="descricao"
             id="descricao"
             cols="60"
-            placeholder="Escreva sua pergunta aqui..."
+            placeholder="Marque sua mini-mentoria..."
           ></textarea>
         </div>
       </div>
@@ -424,7 +479,12 @@
           class="modal-title texto-negrito"
           id="TituloModalCentralizado"
         >
-          Compartilhe materiais importantes!
+        <img
+            class="img-post img-fluid"
+            src="../../assets/img/padrao-perfil.jpg"
+            alt="Logo Mathetai"
+          />
+          Compartilhe materiais importantes
         </h5>
         <button
           type="button"
@@ -487,6 +547,11 @@
           class="modal-title texto-negrito"
           id="TituloModalCentralizado"
         >
+        <img
+            class="img-post img-fluid"
+            src="../../assets/img/padrao-perfil.jpg"
+            alt="Logo Mathetai"
+          />
           Marque ou participe de um evento
         </h5>
         <button
@@ -500,18 +565,69 @@
       </div>
       <div class="modal-body">
         <div class="form-group d-flex flex-column justify-content-center">
-          <img
-            class="img-fluid"
-            src="https://i.imgur.com/UWvPZAf.png"
-            style="width: 90%"
-            alt=""
-          />
-          <label for="titulo">Escreva aqui:</label>
+          
+          <!--Calendario-->
+         <div class="month">
+          <ul>
+            <li class="prev">&#10094;</li>
+            <li class="next">&#10095;</li>
+            <li><strong>Março - <span style="font-size:18px">2021</span></strong></li>
+          </ul>
+        </div>
+        
+        <ul class="weekdays">
+          <li style='color: #f44235'>Dom</li>
+          <li>Seg</li>
+          <li>Ter</li>
+          <li>Qua</li>
+          <li>Qui</li>
+          <li>Sex</li>
+          <li>Sab</li>
+        </ul>
+        
+        <ul class="days mb-2">
+          <li></li>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li style='color: #f44235'>7</li>
+          <li>8</li>
+          <li>9</li>
+          <li>10</li>
+          <li>11</li>
+          <li>12</li>
+          <li>13</li>
+          <li style='color: #f44235'>14</li>
+          <li>15</li>
+          <li>16</li>
+          <li>17</li>
+          <li><span class="active">18</span></li>
+          <li>19</li>
+          <li>20</li>
+          <li style='color: #f44235'>21</li>
+          <li>22</li>
+          <li>23</li>
+          <li>24</li>
+          <li>25</li>
+          <li>26</li>
+          <li>27</li>
+          <li style='color: #f44235'>28</li>
+          <li>29</li>
+          <li>30</li>
+          <li>31</li>
+          
+        </ul>
+         <!--/Calendario-->
+
+          <label for="titulo">Eventos:</label>
           <textarea
             name="descricao"
             id="descricao"
             cols="60"
-            placeholder="Escreva sua pergunta aqui..."
+            placeholder="Inscreva-se ou crie um evento..."
           ></textarea>
         </div>
       </div>

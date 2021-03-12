@@ -61,14 +61,16 @@ a{
   color: #494949;
 }
 
-.botao-cadas {
-  background-color: #0f6d62;
+.btn-verdepetroleo {
+  font-weight: bold;
   color: white;
+  background-color: #0f6d62;
 }
 
-.botao-cancel {
-  background-color: #f44235;
+.btn-vermelhoclaro {
+  font-weight: bold;
   color: white;
+  background-color: #f44235;
 }
 
 .fa-th {

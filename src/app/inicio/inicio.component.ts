@@ -18,7 +18,6 @@ export class InicioComponent implements OnInit {
   tema: Tema = new Tema();
   postagem: Postagem = new Postagem();
 
-  //curtida: number = this.postagem.interacao;
   descricao = this.postagem.descricao;
 
   listaPostagens: Postagem[];
@@ -110,9 +109,9 @@ export class InicioComponent implements OnInit {
   }
 
   curtir(id: number) {
-    this.postagemService.putInteracao(id).subscribe(()=> {
-      this.getAllPostagem();
-    });
+      this.postagemService.putInteracao(id).subscribe(()=> {
+        this.getAllPostagem();
+      });
   }
 
 }

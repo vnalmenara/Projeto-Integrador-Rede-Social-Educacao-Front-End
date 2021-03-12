@@ -52,14 +52,16 @@
     color: #494949;
 }
 
-.botao-cadas {
-    background-color: #0F6D62;
+.btn-verdepetroleo {
+    font-weight: bold;
     color: white;
+    background-color: #0F6D62;
 }
 
-.botao-cancel {
-    background-color: #F44235;
+.btn-vermelhoclaro {
+    font-weight: bold;
     color: white;
+    background-color: #F44235;
 }
 
 .fa-th{

@@ -82,11 +82,10 @@ export class TemasComponent implements OnInit {
       });
   }
 
-  curtir() {
-    if (this.curtida == null) {
-      this.curtida = 1;
-    } else {
-      this.curtida += 1;
-    }
+  curtir(id: number) {
+    this.postagemService.putInteracao(id).subscribe(()=> {
+      this.getAllPostagemByTema(this.idTema);
+    });
   }
+
 }
