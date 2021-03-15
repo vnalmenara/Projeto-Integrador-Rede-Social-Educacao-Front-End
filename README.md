@@ -1,14 +1,14 @@
 # Mathetai - Student Club
 ### Equipe de desenvolvedores do Mathetai:
-🐼 [Allen]
+🐼 [Allen Vieira]
 <br>
-🐯 [Breno]
+🐯 [Breno Noccioli]
 <br>
-🐶 [Fernanda]
+🐶 [Fernanda Ferraz]
 <br>
-😺 [Lais]
+😺 [Lais Lima]
 <br>
-🦊 [Verônica]
+🦊 [Verônica Almenara]
 
 <p align="center"><img align="center" alt = "Logo Mathetai" width = "250px" src = "https://i.imgur.com/jIRX2qx.png" /></p>
 
@@ -29,8 +29,8 @@
 [back-end]: <https://github.com/vnalmenara/Projeto-Integrador-Rede-Social-Educacao/blob/main/documentacao/documentacao.md/>
 [front-end]: <https://github.com/vnalmenara/Projeto-Integrador-Rede-Social-Educacao-Front-End/tree/main/documentation/>
 [site]: <https://mathetai.herokuapp.com/>
-[allen]: <https://github.com/AllenLVieira/>
-[breno]: <https://github.com/BrenoNoccioli/>
-[fernanda]: <https://github.com/fernandaferraz951/>
-[lais]: <https://github.com/LaisLimaSantos/>
-[verônica]: <https://github.com/vnalmenara/>
+[allen vieira]: <https://github.com/AllenLVieira/>
+[breno noccioli]: <https://github.com/BrenoNoccioli/>
+[fernanda ferraz]: <https://github.com/fernandaferraz951/>
+[lais lima]: <https://github.com/LaisLimaSantos/>
+[verônica almenara]: <https://github.com/vnalmenara/>
