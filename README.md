@@ -21,22 +21,18 @@
 
 ### Imagens
 #### Login
-Imagem aqui
+<img align = "center" alt = "Componente Login" width="80%" src = "https://i.imgur.com/rvLojc0.jpg" />
 
-#### Página inicial
-Imagem aqui
+## Tenha você também a experiência de ser um Mathetaiano!
+<img align = "center" alt = "Componente Login" width="30%" src = "https://i.imgur.com/HDn3PFL.jpg" />
 
-#### Página Temas
-Imagem aqui
 
-#### Página Quem somos
-Imagem aqui
 
 [back-end]: <https://github.com/vnalmenara/Projeto-Integrador-Rede-Social-Educacao/blob/main/documentacao/documentacao.md/>
 [front-end]: <https://github.com/vnalmenara/Projeto-Integrador-Rede-Social-Educacao-Front-End/tree/main/documentation/>
 [site]: <https://mathetai.herokuapp.com/>
 [allen]: <https://github.com/AllenLVieira/>
-[breno]: <https://github.com/AllenLVieira/>
-[fernanda]: <https://github.com/AllenLVieira/>
-[lais]: <https://github.com/AllenLVieira/>
-[verônica]: <https://github.com/AllenLVieira/>
+[breno]: <https://github.com/BrenoNoccioli/>
+[fernanda]: <https://github.com/fernandaferraz951/>
+[lais]: <https://github.com/LaisLimaSantos/>
+[verônica]: <https://github.com/vnalmenara/>
