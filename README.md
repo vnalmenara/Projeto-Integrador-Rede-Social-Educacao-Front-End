@@ -1,9 +1,13 @@
 # Mathetai
-### Equipe do Mathetai: (Assim ou fotos nossas com link? Aqui em cima ou no fim?)
+### Equipe do Mathetai:
 🐼 [Allen]
-🐴 [Breno]
+<br>
+🐯 [Breno]
+<br>
 🐶 [Fernanda]
+<br>
 😺 [Lais]
+<br>
 🦊 [Verônica]
 
 [<img align = "center" alt = "Logo Mathetai" width = "250px" src = "https://i.imgur.com/jIRX2qx.png" />][site]
