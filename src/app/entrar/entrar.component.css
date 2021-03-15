@@ -23,7 +23,7 @@
 }
 
 .tmn-logo {
-  width: 150px;
+  width: 130px;
   align-items: center;
 }
 
@@ -40,6 +40,16 @@
   font-weight: bold;
   color: #3bbba0;
   text-decoration: underline;
+}
+
+.card{
+background-color: #f1f1f1;
+border: none
+}
+
+.card-img-top{
+  border: 1px solid black;
+  margin-top: 25px;
 }
 
 @media (min-width: 360px) {

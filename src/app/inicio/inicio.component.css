@@ -61,6 +61,21 @@ a{
   color: #494949;
 }
 
+.teste{
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+.teste::after{
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  width: 98%;
+  height: 1px;
+  background-color: rgb(148, 148, 148);
+}
+
 .btn-verdepetroleo {
   font-weight: bold;
   color: white;
@@ -91,10 +106,22 @@ a{
   .top-conteudo {
     display: none;
   }
+
+  .teste{
+    margin-bottom: 30px;
+  }
+
+  .teste::after{
+    width:95%;
+  }
 }
 
 @media (min-width: 768px) {
   .top-conteudo {
     display: block;
+  }
+
+  .teste::after{
+    width: 98%;
   }
 }
