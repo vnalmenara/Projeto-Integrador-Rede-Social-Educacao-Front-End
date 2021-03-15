@@ -24,6 +24,8 @@
 <h2 align="center">Tenha você também a experiência de ser um Mathetaiano!</h2> 
 <p align="center"><img align = "center" alt = "Componente Login" width="30%" src = "https://i.imgur.com/HDn3PFL.jpg" /></p>
 
+<p align="center"> Mathetai é a mais nova comunidade para o compartilhamento de conhecimento, <br> unindo quem deseja ensinar e quem deseja aprender em uma mesma plataforma.</p>
+
 [back-end]: <https://github.com/vnalmenara/Projeto-Integrador-Rede-Social-Educacao/blob/main/documentacao/documentacao.md/>
 [front-end]: <https://github.com/vnalmenara/Projeto-Integrador-Rede-Social-Educacao-Front-End/tree/main/documentation/>
 [site]: <https://mathetai.herokuapp.com/>
