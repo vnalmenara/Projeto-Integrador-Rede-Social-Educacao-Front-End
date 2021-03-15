@@ -22,7 +22,7 @@
 <p align="center"><img align = "center" alt = "Componente Login" width="80%" src = "https://i.imgur.com/rvLojc0.jpg" /></p>
 
 <h2 align="center">Tenha você também a experiência de ser um Mathetaiano!</h2> 
-<h4 align="center">Aponte a câmera do seu celular para o QR Code e acesse o site</h4> 
+<h4 align="center">Aponte a câmera do seu celular para o QR Code e acesse o site.</h4> 
 <p align="center"><img align = "center" alt = "Componente Login" width="30%" src = "https://i.imgur.com/HDn3PFL.jpg" /></p>
 
 <p align="center"> Mathetai é a mais nova comunidade para o compartilhamento de conhecimento, <br> unindo quem deseja ensinar e quem deseja aprender em uma mesma plataforma.</p>
